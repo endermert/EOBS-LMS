@@ -1,0 +1,150 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EOBS_001.Site" %>
+
+<!DOCTYPE html public "?">
+<!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en-us" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 8]> <html lang="en-us" class="no-js">     <![endif]-->
+	<head runat="server">
+		<meta charset="utf-8">
+
+		<title>Eðitim Öðretim Bilgi Sistemi | Iþýk Eðitim Kurumlarý</title>
+
+  		<meta name="description" content="">
+  		<meta name="author" content="Ender Mert | Iþýk Eðitim Kurumlarý">
+
+	<!-- iPhone, iPad and Android specific settings -->
+
+		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1;">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href="images/interface/iOS_icon.png" rel="apple-touch-icon">
+
+	<!-- Styles -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+		<link rel="stylesheet" href="styles/adminica/main.css">
+		<link rel="stylesheet" href="styles/adminica/grid.css">
+		<link rel="stylesheet" href="styles/adminica/mobile.css">
+
+		<link rel="stylesheet" href="styles/plugins/bootstrap/bootstrap.css">
+
+
+		<link rel="stylesheet" href="styles/themes/layout_fixed.css" >
+		<!--<link rel="stylesheet" href="styles/themes/nav_switcher.php?default=switcher" >-->
+		<link rel="stylesheet" href="styles/themes/skin_light.css" >
+		<link rel="stylesheet" href="styles/themes/theme_blue.css" >
+
+		<link rel="stylesheet" href="styles/themes/switcher.css"> <!-- Styles for the styleswitcher bar  -->
+		<link rel="stylesheet" href="styles/adminica/colours.css"> <!-- this file overrides the theme's default colour scheme, allowing more colour combinations (see layout example page) -->
+
+
+		<script src="scripts/jquery/jquery.js"></script>
+		<script src="scripts/prefixfree/prefixfree.js"></script>
+		<script src="scripts/bootstrap/bootstrap.js"></script>
+
+		<script src="scripts/adminica/adminica_ui.js"></script>
+		<script src="scripts/adminica/adminica_mobile.js"></script>
+		<script src="scripts/adminica/adminica_load.js"></script>
+
+</head>
+<body>	
+    <form id="mainfrm1" runat="server">
+        <div id="pjax">
+	        <div id="wrapper" data-adminica-nav-top="1" data-adminica-side-top="1" class="has_fixed_bar">
+                <div id="sidebar" class="sidebar pjax_links fixed">
+	                <div class="cog">+</div>
+    
+	                    <div class="user_box dark_box clearfix">
+		                    <img src="images/interface/profile.jpg" width="55" alt="Profile Pic" />
+		                    <h2><asp:Label ID="lblStatu" runat="server" Text=""></asp:Label></h2>
+		                    <h3><asp:Label ID="lblAd" runat="server" Text=""></asp:Label></h3>
+		                    <ul>
+			                    <li><asp:LinkButton ID="btnAyarlar" runat="server" >Ayarlar</asp:LinkButton><span class="divider">|</span></li>
+			                    <li><asp:LinkButton ID="btnCikis" runat="server" OnClick="btnCikis_Click">Çýkýþ</asp:LinkButton></li>
+		                    </ul>
+	                    </div><!-- #user_box -->
+
+	                <ul class="side_accordion" id="nav_side"> <!-- add class 'open_multiple' to change to from accordion to toggles -->
+                        <li><li>
+		                <li><a href="index.aspx"><img src="images/icons/small/grey/laptop.png"/><span>Anasayfa</span></a></li>
+                        <li class="current"><a href="#"><img src="images/icons/small/grey/mail.png"/><span>Mesajlar</span></a>
+			                <ul class="drawer">
+				                <li><a href="Mesaj_Yeni.aspx"><span>Mesaj Yaz</span></a></li>
+				                <li><a href="Mesaj_Gelen.aspx"><span>Gelen Kutusu</span></a></li>
+				                <li><a href="Mesaj_Giden.aspx"><span>Giden Kutusu</span></a></li>
+			                </ul>
+		                </li>
+		                <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>H.K.S</span></a></li>
+                        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>R.D.S</span></a></li>
+                        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>O.D.M</span></a></li>
+                        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>Raporlar</span></a></li>
+                        <li><a href="#"><img src="images/icons/small/grey/admin_user.png"/><span>Yönetim</span></a>
+                            <ul class="drawer">
+                                <li><a href="Yonet_Okullar.aspx"><img src="images/icons/small/grey/list.png"/><span>Okul Yönetimi</span></a></li>
+                                <li><a href="Yonet_Dersler.aspx"><img src="images/icons/small/grey/list.png"/><span>Ders Yönetimi</span></a></li>
+                                <li><a href="Yonet_Siniflar.aspx"><img src="images/icons/small/grey/list.png"/><span>Sýnýf Yönetimi</span></a></li>
+                                <li><a href="Yonet_Subeler.aspx"><img src="images/icons/small/grey/list.png"/><span>Þube Yönetimi</span></a></li>
+                                <li><a href="Yonet_Kurlar.aspx"><img src="images/icons/small/grey/list.png"/><span>Kur Yönetimi</span></a></li>
+                                <li><a href="Yonet_Ogr_Liste.aspx"><img src="images/icons/small/grey/users.png"/><span>Öðrenci Yönetimi</span></a></li>
+	                        </ul>
+                        </li>
+	                </ul>
+
+	                <div id="search_side" class="dark_box"><form><input class="" type="text" placeholder="Search Adminica..."></form></div>
+
+	                <ul id="side_links" class="side_links" style="margin-bottom:0;">
+		                <li><a target="_blank" href="#">Yardým</a>
+		                <li><a target="_blank" href="#">Ýletiþim</a></li>
+		                <li><a target="_blank" href="#">Destek</a></li>
+	                </ul>
+                </div><!-- #sidebar -->
+	
+		        <div class="navbar navbar-fixed-top">
+                  <div class="navbar-inner">
+                    <div class="container-fluid">
+                      <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="brand" href="#" style="">Eðitim Öðretim Bilgi Sistemi</a>
+                      <ul class="nav pull-right">
+                        <li class="active dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Yardým <b class="caret"></b></a>
+			                    <ul class="dropdown-menu">
+			                      <li><a target="_blank" href="#">Destek</a></li>
+			                      <li><a target="_blank" href="#">Forum</a></li>
+			                      <li class="divider"></li>
+			                      <li><a target="_blank" href="#">Ýletiþim</a></li>
+			                    </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li>
+                            <asp:LinkButton ID="btnCikis2" runat="server" OnClick="btnCikis_Click">Çýkýþ</asp:LinkButton>
+                        </li>
+                      </ul>
+                     </div>
+                  </div>
+                </div>			
+
+
+                <div id="main_container" class="main_container container_16 clearfix">
+                    
+                </div>
+        
+
+		        <div id="loading_overlay">
+			        <div class="loading_message round_bottom">
+				        <img src="images/interface/loading.gif" alt="loading" />
+			        </div>
+		        </div>
+             </div>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SinavSonucListesi" targetNamespace="http://tempuri.org/SinavSonucListesi.xsd" xmlns:mstns="http://tempuri.org/SinavSonucListesi.xsd" xmlns="http://tempuri.org/SinavSonucListesi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="EOBS_001ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EOBS_001ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.EOBS_001ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Sinav_Sonuc_ListesiTableAdapter" GeneratorDataComponentClassName="View_Sinav_Sonuc_ListesiTableAdapter" Name="View_Sinav_Sonuc_Listesi" UserDataComponentName="View_Sinav_Sonuc_ListesiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EOBS_001ConnectionString (Web.config)" DbObjectName="EOBS_001.dbo.View_Sinav_Sonuc_Listesi" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OKL_ADI, SUB_AD, KUL_NO, KUL_ISIM, KUL_SOYISIM, DSN_KTPCK, DRS_AD, DSN_DS, DSN_YS, DSN_BS, DSN_NS, SNS_DS, SNS_YS, SNS_BS, SNS_NS, SNS_SRASUB, SNS_SRASNF, SNS_SRAOKL, SNS_SRAKRM, SNS_PUAN, SNS_BSRYZD, OKL_KISA, SNV_AD, SNS_TOPKRM FROM View_Sinav_Sonuc_Listesi</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OKL_ADI" DataSetColumn="OKL_ADI" />
+              <Mapping SourceColumn="SUB_AD" DataSetColumn="SUB_AD" />
+              <Mapping SourceColumn="KUL_NO" DataSetColumn="KUL_NO" />
+              <Mapping SourceColumn="KUL_ISIM" DataSetColumn="KUL_ISIM" />
+              <Mapping SourceColumn="KUL_SOYISIM" DataSetColumn="KUL_SOYISIM" />
+              <Mapping SourceColumn="DSN_KTPCK" DataSetColumn="DSN_KTPCK" />
+              <Mapping SourceColumn="DRS_AD" DataSetColumn="DRS_AD" />
+              <Mapping SourceColumn="DSN_DS" DataSetColumn="DSN_DS" />
+              <Mapping SourceColumn="DSN_YS" DataSetColumn="DSN_YS" />
+              <Mapping SourceColumn="DSN_BS" DataSetColumn="DSN_BS" />
+              <Mapping SourceColumn="DSN_NS" DataSetColumn="DSN_NS" />
+              <Mapping SourceColumn="SNS_DS" DataSetColumn="SNS_DS" />
+              <Mapping SourceColumn="SNS_YS" DataSetColumn="SNS_YS" />
+              <Mapping SourceColumn="SNS_BS" DataSetColumn="SNS_BS" />
+              <Mapping SourceColumn="SNS_NS" DataSetColumn="SNS_NS" />
+              <Mapping SourceColumn="SNS_SRASUB" DataSetColumn="SNS_SRASUB" />
+              <Mapping SourceColumn="SNS_SRASNF" DataSetColumn="SNS_SRASNF" />
+              <Mapping SourceColumn="SNS_SRAOKL" DataSetColumn="SNS_SRAOKL" />
+              <Mapping SourceColumn="SNS_SRAKRM" DataSetColumn="SNS_SRAKRM" />
+              <Mapping SourceColumn="SNS_PUAN" DataSetColumn="SNS_PUAN" />
+              <Mapping SourceColumn="SNS_BSRYZD" DataSetColumn="SNS_BSRYZD" />
+              <Mapping SourceColumn="OKL_KISA" DataSetColumn="OKL_KISA" />
+              <Mapping SourceColumn="SNV_AD" DataSetColumn="SNV_AD" />
+              <Mapping SourceColumn="SNS_TOPKRM" DataSetColumn="SNS_TOPKRM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SinavSonucListesi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SinavSonucListesi" msprop:Generator_UserDSName="SinavSonucListesi">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Sinav_Sonuc_Listesi" msprop:Generator_TableClassName="View_Sinav_Sonuc_ListesiDataTable" msprop:Generator_TableVarName="tableView_Sinav_Sonuc_Listesi" msprop:Generator_TablePropName="View_Sinav_Sonuc_Listesi" msprop:Generator_RowDeletingName="View_Sinav_Sonuc_ListesiRowDeleting" msprop:Generator_RowChangingName="View_Sinav_Sonuc_ListesiRowChanging" msprop:Generator_RowEvHandlerName="View_Sinav_Sonuc_ListesiRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Sinav_Sonuc_ListesiRowDeleted" msprop:Generator_UserTableName="View_Sinav_Sonuc_Listesi" msprop:Generator_RowChangedName="View_Sinav_Sonuc_ListesiRowChanged" msprop:Generator_RowEvArgName="View_Sinav_Sonuc_ListesiRowChangeEvent" msprop:Generator_RowClassName="View_Sinav_Sonuc_ListesiRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OKL_ADI" msprop:Generator_ColumnVarNameInTable="columnOKL_ADI" msprop:Generator_ColumnPropNameInRow="OKL_ADI" msprop:Generator_ColumnPropNameInTable="OKL_ADIColumn" msprop:Generator_UserColumnName="OKL_ADI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUB_AD" msprop:Generator_ColumnVarNameInTable="columnSUB_AD" msprop:Generator_ColumnPropNameInRow="SUB_AD" msprop:Generator_ColumnPropNameInTable="SUB_ADColumn" msprop:Generator_UserColumnName="SUB_AD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KUL_NO" msprop:Generator_ColumnVarNameInTable="columnKUL_NO" msprop:Generator_ColumnPropNameInRow="KUL_NO" msprop:Generator_ColumnPropNameInTable="KUL_NOColumn" msprop:Generator_UserColumnName="KUL_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="KUL_ISIM" msprop:Generator_ColumnVarNameInTable="columnKUL_ISIM" msprop:Generator_ColumnPropNameInRow="KUL_ISIM" msprop:Generator_ColumnPropNameInTable="KUL_ISIMColumn" msprop:Generator_UserColumnName="KUL_ISIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KUL_SOYISIM" msprop:Generator_ColumnVarNameInTable="columnKUL_SOYISIM" msprop:Generator_ColumnPropNameInRow="KUL_SOYISIM" msprop:Generator_ColumnPropNameInTable="KUL_SOYISIMColumn" msprop:Generator_UserColumnName="KUL_SOYISIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DSN_KTPCK" msprop:Generator_ColumnVarNameInTable="columnDSN_KTPCK" msprop:Generator_ColumnPropNameInRow="DSN_KTPCK" msprop:Generator_ColumnPropNameInTable="DSN_KTPCKColumn" msprop:Generator_UserColumnName="DSN_KTPCK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DRS_AD" msprop:Generator_ColumnVarNameInTable="columnDRS_AD" msprop:Generator_ColumnPropNameInRow="DRS_AD" msprop:Generator_ColumnPropNameInTable="DRS_ADColumn" msprop:Generator_UserColumnName="DRS_AD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DSN_DS" msprop:Generator_ColumnVarNameInTable="columnDSN_DS" msprop:Generator_ColumnPropNameInRow="DSN_DS" msprop:Generator_ColumnPropNameInTable="DSN_DSColumn" msprop:Generator_UserColumnName="DSN_DS" type="xs:short" minOccurs="0" />
+              <xs:element name="DSN_YS" msprop:Generator_ColumnVarNameInTable="columnDSN_YS" msprop:Generator_ColumnPropNameInRow="DSN_YS" msprop:Generator_ColumnPropNameInTable="DSN_YSColumn" msprop:Generator_UserColumnName="DSN_YS" type="xs:short" minOccurs="0" />
+              <xs:element name="DSN_BS" msprop:Generator_ColumnVarNameInTable="columnDSN_BS" msprop:Generator_ColumnPropNameInRow="DSN_BS" msprop:Generator_ColumnPropNameInTable="DSN_BSColumn" msprop:Generator_UserColumnName="DSN_BS" type="xs:short" minOccurs="0" />
+              <xs:element name="DSN_NS" msprop:Generator_ColumnVarNameInTable="columnDSN_NS" msprop:Generator_ColumnPropNameInRow="DSN_NS" msprop:Generator_ColumnPropNameInTable="DSN_NSColumn" msprop:Generator_UserColumnName="DSN_NS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SNS_DS" msprop:Generator_ColumnVarNameInTable="columnSNS_DS" msprop:Generator_ColumnPropNameInRow="SNS_DS" msprop:Generator_ColumnPropNameInTable="SNS_DSColumn" msprop:Generator_UserColumnName="SNS_DS" type="xs:short" minOccurs="0" />
+              <xs:element name="SNS_YS" msprop:Generator_ColumnVarNameInTable="columnSNS_YS" msprop:Generator_ColumnPropNameInRow="SNS_YS" msprop:Generator_ColumnPropNameInTable="SNS_YSColumn" msprop:Generator_UserColumnName="SNS_YS" type="xs:short" minOccurs="0" />
+              <xs:element name="SNS_BS" msprop:Generator_ColumnVarNameInTable="columnSNS_BS" msprop:Generator_ColumnPropNameInRow="SNS_BS" msprop:Generator_ColumnPropNameInTable="SNS_BSColumn" msprop:Generator_UserColumnName="SNS_BS" type="xs:short" minOccurs="0" />
+              <xs:element name="SNS_NS" msprop:Generator_ColumnVarNameInTable="columnSNS_NS" msprop:Generator_ColumnPropNameInRow="SNS_NS" msprop:Generator_ColumnPropNameInTable="SNS_NSColumn" msprop:Generator_UserColumnName="SNS_NS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SNS_SRASUB" msprop:Generator_ColumnVarNameInTable="columnSNS_SRASUB" msprop:Generator_ColumnPropNameInRow="SNS_SRASUB" msprop:Generator_ColumnPropNameInTable="SNS_SRASUBColumn" msprop:Generator_UserColumnName="SNS_SRASUB" type="xs:short" minOccurs="0" />
+              <xs:element name="SNS_SRASNF" msprop:Generator_ColumnVarNameInTable="columnSNS_SRASNF" msprop:Generator_ColumnPropNameInRow="SNS_SRASNF" msprop:Generator_ColumnPropNameInTable="SNS_SRASNFColumn" msprop:Generator_UserColumnName="SNS_SRASNF" type="xs:short" minOccurs="0" />
+              <xs:element name="SNS_SRAOKL" msprop:Generator_ColumnVarNameInTable="columnSNS_SRAOKL" msprop:Generator_ColumnPropNameInRow="SNS_SRAOKL" msprop:Generator_ColumnPropNameInTable="SNS_SRAOKLColumn" msprop:Generator_UserColumnName="SNS_SRAOKL" type="xs:short" minOccurs="0" />
+              <xs:element name="SNS_SRAKRM" msprop:Generator_ColumnVarNameInTable="columnSNS_SRAKRM" msprop:Generator_ColumnPropNameInRow="SNS_SRAKRM" msprop:Generator_ColumnPropNameInTable="SNS_SRAKRMColumn" msprop:Generator_UserColumnName="SNS_SRAKRM" type="xs:short" minOccurs="0" />
+              <xs:element name="SNS_PUAN" msprop:Generator_ColumnVarNameInTable="columnSNS_PUAN" msprop:Generator_ColumnPropNameInRow="SNS_PUAN" msprop:Generator_ColumnPropNameInTable="SNS_PUANColumn" msprop:Generator_UserColumnName="SNS_PUAN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SNS_BSRYZD" msprop:Generator_ColumnVarNameInTable="columnSNS_BSRYZD" msprop:Generator_ColumnPropNameInRow="SNS_BSRYZD" msprop:Generator_ColumnPropNameInTable="SNS_BSRYZDColumn" msprop:Generator_UserColumnName="SNS_BSRYZD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OKL_KISA" msprop:Generator_ColumnVarNameInTable="columnOKL_KISA" msprop:Generator_ColumnPropNameInRow="OKL_KISA" msprop:Generator_ColumnPropNameInTable="OKL_KISAColumn" msprop:Generator_UserColumnName="OKL_KISA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SNV_AD" msprop:Generator_ColumnVarNameInTable="columnSNV_AD" msprop:Generator_ColumnPropNameInRow="SNV_AD" msprop:Generator_ColumnPropNameInTable="SNV_ADColumn" msprop:Generator_UserColumnName="SNV_AD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SNS_TOPKRM" msprop:Generator_ColumnVarNameInTable="columnSNS_TOPKRM" msprop:Generator_ColumnPropNameInRow="SNS_TOPKRM" msprop:Generator_ColumnPropNameInTable="SNS_TOPKRMColumn" msprop:Generator_UserColumnName="SNS_TOPKRM" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

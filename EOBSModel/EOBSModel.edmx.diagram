@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81d3b59a0c8b4d2ca3b438a890d6b49e" Name="Diagram1">
+        <EntityTypeShape EntityType="EOBSModel.KARNELER" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.KULLANICILAR" Width="1.5" PointX="3" PointY="3.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.KURLAR" Width="1.5" PointX="8.25" PointY="5" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.MESAJLAR" Width="1.5" PointX="5.25" PointY="10" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.SINIFLAR" Width="1.5" PointX="10.25" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.SUBELER" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.YETKILER" Width="1.5" PointX="0.75" PointY="3" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_SINIFLAR_KARNELER" ManuallyRouted="false" />
+        <AssociationConnector Association="EOBSModel.FK_KULLANICILAR_KURLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="EOBSModel.FK_KULLANICILAR_SUBELER" ManuallyRouted="false" />
+        <AssociationConnector Association="EOBSModel.FK_KULLANICILAR_YETKILER" ManuallyRouted="false" />
+        <AssociationConnector Association="EOBSModel.FK_MESAJLAR_KIM" ManuallyRouted="false" />
+        <AssociationConnector Association="EOBSModel.FK_MESAJLAR_KIME" ManuallyRouted="false" />
+        <AssociationConnector Association="EOBSModel.FK_KURLAR_SINIFLAR" ManuallyRouted="false" />
+        <AssociationConnector Association="EOBSModel.FK_SUBELER_SINIFLAR" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EOBSModel.BRANSLAR" Width="1.5" PointX="2.75" PointY="12.875" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_KULLANICILAR_BRANSLAR" />
+        <EntityTypeShape EntityType="EOBSModel.CINSIYET" Width="1.5" PointX="2.375" PointY="21.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.HAFTALAR" Width="1.5" PointX="0.625" PointY="21.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.ARA_TBL1" Width="1.5" PointX="6.7190737755592318" PointY="25.058469858513433" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_ARA_TBL1_SUBELER" />
+        <EntityTypeShape EntityType="EOBSModel.DAMLACIKLAR" Width="1.5" PointX="11.826731895947237" PointY="7.8340754545452427" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_ARA_TBL1_DAMLACIKLAR" />
+        <AssociationConnector Association="EOBSModel.FK_DAMLACIKLAR_HAFTALAR" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="EOBSModel.DUYURULAR" Width="1.5" PointX="9.1611870309157233" PointY="28.512606768176241" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.ODEVLER" Width="1.5" PointX="3.3887115602328963" PointY="22.141775156437316" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_ARA_TBL1_DUYURULAR" />
+        <AssociationConnector Association="EOBSModel.FK_ARA_TBL1_HAFTALAR" />
+        <AssociationConnector Association="EOBSModel.FK_ARA_TBL1_ODEVLER" />
+        <AssociationConnector Association="EOBSModel.FK_DUYURULAR_HAFTALAR" />
+        <AssociationConnector Association="EOBSModel.FK_ODEVLER_HAFTALAR" />
+        <EntityTypeShape EntityType="EOBSModel.OZELNOTLAR" Width="1.5" PointX="0.5" PointY="10.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.ODEVSNCLAR" Width="1.5" PointX="2.875" PointY="31.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.OZELNOT" Width="1.5" PointX="2.125" PointY="15.375" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_OZELNOT_KULLANICILAR" />
+        <AssociationConnector Association="EOBSModel.FK_OZELNOT_OZELNOTLAR" />
+        <EntityTypeShape EntityType="EOBSModel.ODEVSNC" Width="1.5" PointX="8.5450910630380221" PointY="10.897664969273686" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_ODEVSNC_KULLANICILAR" />
+        <AssociationConnector Association="EOBSModel.FK_ODEVSNC_ODEVSNCLAR" />
+        <EntityTypeShape EntityType="EOBSModel.SINAVTIP" Width="1.5" PointX="20" PointY="39.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.CEVAPLAR" Width="1.5" PointX="0.8519854996595464" PointY="4.9954660409109044" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.DRSSNVSNC" Width="1.5" PointX="12.125" PointY="28" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.SINAVLAR" Width="1.5" PointX="9.8831780636139115" PointY="19.239506715554516" IsExpanded="true" />
+        <AssociationConnector Association="EOBSModel.FK_CEVAPLAR_SINAVLAR" />
+        <AssociationConnector Association="EOBSModel.FK_DRSSNVSNC_SINAVLAR" />
+        <EntityTypeShape EntityType="EOBSModel.ARA_TBL2" Width="1.5" PointX="5.875" PointY="5.125" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_ARA_TBL2_KULLANICILAR" />
+        <AssociationConnector Association="EOBSModel.FK_DRSSNVSNC_KULLANICILAR" />
+        <EntityTypeShape EntityType="EOBSModel.SINAVSNC" Width="1.5" PointX="11.911970727104681" PointY="10.874229197797472" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVSNC_KULLANICILAR" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVSNC_SINAVLAR" />
+        <EntityTypeShape EntityType="EOBSModel.RDSDERSLER" Width="1.5" PointX="7.663296079106301" PointY="17.705768965979" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.RDSLISTE" Width="1.5" PointX="5.375" PointY="14.375" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_RDSDERSLER_KULLANICILAR" />
+        <AssociationConnector Association="EOBSModel.FK_RDSLISTE_KULLANICILAR" />
+        <AssociationConnector Association="EOBSModel.FK_RDSDERSLER_SINIFLAR" />
+        <AssociationConnector Association="EOBSModel.FK_RDSLISTE_RDSDERSLER" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="EOBSModel.KARNEDERS" Width="1.5" PointX="16" PointY="12.875" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_KARNEDERS_SINIFLAR" />
+        <EntityTypeShape EntityType="EOBSModel.KARNEDERSNOT" Width="1.5" PointX="3.5499398873885815" PointY="22.609501819410131" IsExpanded="false" />
+        <AssociationConnector Association="EOBSModel.FK_KARNEDERSNOT_KULLANICILAR" />
+        <EntityTypeShape EntityType="EOBSModel.OKULTUR" Width="1.5" PointX="2" PointY="7.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.DEGEREGITIM" Width="1.5" PointX="8.40620220657727" PointY="9.3556910945827561" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.AOPLANLAR" Width="1.5" PointX="5.6280616436284321" PointY="27.447157470251973" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.DERSLER" Width="1.5" PointX="2.7905121235132739" PointY="29.334168134878468" IsExpanded="false" />
+        <EntityTypeShape EntityType="EOBSModel.OPTIK" Width="1.5" PointX="7.9062956552516184" PointY="14.685641668124889" IsExpanded="true" />
+        <EntityTypeShape EntityType="EOBSModel.SINAVDETAY" Width="1.5" PointX="10.260104286605539" PointY="28.118159202913827" IsExpanded="true" />
+        <AssociationConnector Association="EOBSModel.FK_DRSSNVSNC_DERSLER" />
+        <AssociationConnector Association="EOBSModel.FK_KARNEDERS_DERSLER" />
+        <AssociationConnector Association="EOBSModel.FK_KARNEDERSNOT_DERSLER" />
+        <AssociationConnector Association="EOBSModel.FK_RDSDERSLER_DERSLER" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER0" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER1" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER10" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER11" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER12" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER13" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER14" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER2" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER3" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER4" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER5" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER6" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER7" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER8" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_DERSLER9" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_OPTIK" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVDETAY_SINAVTIP" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVLAR_SINAVDETAY" />
+        <EntityTypeShape EntityType="EOBSModel.RESIMLER" Width="1.5" PointX="10.98098997538024" PointY="15.087000868789387" />
+        <EntityTypeShape EntityType="EOBSModel.OKULLAR" Width="1.5" PointX="11.681269911900754" PointY="30.703450828186913" />
+        <AssociationConnector Association="EOBSModel.FK_ARA_TBL2_OKULLAR" />
+        <AssociationConnector Association="EOBSModel.FK_KULLANICILAR_OKULLAR" />
+        <AssociationConnector Association="EOBSModel.FK_KURLAR_OKULLAR" />
+        <AssociationConnector Association="EOBSModel.FK_OKULLAR_RESIMLER" />
+        <AssociationConnector Association="EOBSModel.FK_SINIFLAR_OKULLAR" />
+        <AssociationConnector Association="EOBSModel.FK_SUBELER_OKULLAR" />
+        <EntityTypeShape EntityType="EOBSModel.HATALAR" Width="1.5" PointX="5.0456298017155516" PointY="3.218035088487917" />
+        <AssociationConnector Association="EOBSModel.FK_SINAVLAR_HAFTALAR" />
+        <EntityTypeShape EntityType="EOBSModel.HEPTABLO" Width="1.5" PointX="11.202842691542042" PointY="9.7268607363695558" />
+        <AssociationConnector Association="EOBSModel.FK_HEPTABLO_KULLANICILAR" />
+        <EntityTypeShape EntityType="EOBSModel.SORUANALIZ" Width="1.5" PointX="7.88897703955368" PointY="23.479623447861346" />
+        <AssociationConnector Association="EOBSModel.FK_SORUANALIZ_DERSLER" />
+        <AssociationConnector Association="EOBSModel.FK_SORUANALIZ_SINAVLAR" />
+        <EntityTypeShape EntityType="EOBSModel.DAVRANISLAR" Width="1.5" PointX="4.1748385467449385" PointY="16.217064656418312" />
+        <EntityTypeShape EntityType="EOBSModel.DAVRANIS" Width="1.5" PointX="5.3187554019124974" PointY="5.777309748240425" />
+        <EntityTypeShape EntityType="EOBSModel.DEVAMSIZ" Width="1.5" PointX="5.9389721369086637" PointY="4.0708155948998481" />
+        <EntityTypeShape EntityType="EOBSModel.SAYFALAR" Width="1.5" PointX="6.3170088056088467" PointY="31.348770603234307" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

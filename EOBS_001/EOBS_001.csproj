@@ -1,0 +1,1593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66377159-F747-40E8-9AC8-836BD8773B29}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EOBS_001</RootNamespace>
+    <AssemblyName>EOBS_001</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <PrecompileBeforePublish>false</PrecompileBeforePublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMFCell">
+      <HintPath>..\..\SDK\SDK\Bin\CMFCell.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2012.2.724.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Telerik\RadControls for ASP.NET AJAX Q3 2012\Bin40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2012.2.724.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Telerik\RadControls for ASP.NET AJAX Q3 2012\Bin40\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ODS_SinavDegerlendirDiger.aspx" />
+    <Content Include="ODS_SinavTxtUp1.aspx" />
+    <Content Include="HKS_Gelmeyenler.aspx" />
+    <Content Include="HKS_Davranislar.aspx" />
+    <Content Include="images\backgrounds\Plaka.png" />
+    <Content Include="Yetki.html" />
+    <Content Include="Yonet_Davranislar.aspx" />
+    <Content Include="RPR_AraKarne1.aspx" />
+    <Content Include="GNL_Ayarlar.aspx" />
+    <Content Include="GNL_Mesajlar.aspx" />
+    <Content Include="HEP_VeriGiris.aspx" />
+    <Content Include="HKS_DegerEgitimi.aspx" />
+    <Content Include="HKS_HaftalikPlan.aspx" />
+    <Content Include="HKS_OdevSnc.aspx" />
+    <Content Include="HKS_OdevSnclar.aspx" />
+    <Content Include="HKS_OzelNot.aspx" />
+    <Content Include="HKS_OzelNotlar.aspx" />
+    <Content Include="index1.aspx" />
+    <Content Include="index2.aspx" />
+    <Content Include="KRN_Karnem.aspx" />
+    <Content Include="KRN_KarneTanim.aspx" />
+    <Content Include="KRN_NotGiris.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="ODS_OptikFormlar.aspx" />
+    <Content Include="ODS_SinavCevap.aspx" />
+    <Content Include="ODS_SinavDegerlendir.aspx" />
+    <Content Include="ODS_SinavDetay.aspx" />
+    <Content Include="ODS_SinavTanim.aspx" />
+    <Content Include="ODS_SinavTxtUp.aspx" />
+    <Content Include="OGR_BanaOzel.aspx" />
+    <Content Include="OGR_Damlalar.aspx" />
+    <Content Include="OGR_DegerlerEgitimi.aspx" />
+    <Content Include="OGR_Duyurular.aspx" />
+    <Content Include="OGR_HaftalikPlan.aspx" />
+    <Content Include="OGR_Odevler.aspx" />
+    <Content Include="OGR_SinavDetay.aspx" />
+    <Content Include="OGR_Sinavlar.aspx" />
+    <Content Include="RDS_Randevular.aspx" />
+    <Content Include="RDS_Randevum.aspx" />
+    <Content Include="RDS_Randevum1.aspx" />
+    <Content Include="RPR_HaftalikKarne1.aspx" />
+    <Content Include="RPR_HaftalikKarneAna1.aspx" />
+    <Content Include="RPR_HepRaporu1.aspx" />
+    <Content Include="RPR_Randevular.aspx" />
+    <Content Include="RPR_SinavSonuc1.aspx" />
+    <Content Include="RPR_SinavSonucListe1.aspx" />
+    <Content Include="RPR_SinavSonucListesii.aspx" />
+    <Content Include="Sec_Hafta.aspx" />
+    <Content Include="HKS_Odevler.aspx" />
+    <Content Include="HKS_Duyurular.aspx" />
+    <Content Include="Giris.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HKS_Damlaciklar.aspx" />
+    <Content Include="images\backgrounds\bg_ash.jpg" />
+    <Content Include="images\backgrounds\bg_brown_noise.png" />
+    <Content Include="images\backgrounds\bg_brown_stitch.png" />
+    <Content Include="images\backgrounds\bg_content.png" />
+    <Content Include="images\backgrounds\bg_dark_wood.jpg" />
+    <Content Include="images\backgrounds\bg_diag_wood.jpg" />
+    <Content Include="images\backgrounds\bg_heading.png" />
+    <Content Include="images\backgrounds\bg_holes.png" />
+    <Content Include="images\backgrounds\bg_honeycomb.png" />
+    <Content Include="images\backgrounds\bg_input.png" />
+    <Content Include="images\backgrounds\bg_noise.jpg" />
+    <Content Include="images\backgrounds\bg_noise.png" />
+    <Content Include="images\backgrounds\bg_punched.png" />
+    <Content Include="images\backgrounds\bg_sidenav.png" />
+    <Content Include="images\backgrounds\bg_silver.jpg" />
+    <Content Include="images\backgrounds\bg_squares.jpg" />
+    <Content Include="images\backgrounds\bg_squares.png" />
+    <Content Include="images\backgrounds\bg_stripes.png" />
+    <Content Include="images\backgrounds\bg_topnav.png" />
+    <Content Include="images\backgrounds\bg_white_wood.jpg" />
+    <Content Include="images\backgrounds\bg_wood.jpg" />
+    <Content Include="images\backgrounds\bg_wood_light.jpg" />
+    <Content Include="images\backgrounds\bg_wunderwood.jpg" />
+    <Content Include="images\backgrounds\big_wood.jpg" />
+    <Content Include="images\backgrounds\light_vintage.gif" />
+    <Content Include="images\backgrounds\pattern.jpg" />
+    <Content Include="images\backgrounds\pinholes.jpg" />
+    <Content Include="images\icons\small\grey\abacus.png" />
+    <Content Include="images\icons\small\grey\acces_denied_sign.png" />
+    <Content Include="images\icons\small\grey\address_book.png" />
+    <Content Include="images\icons\small\grey\admin_user.png" />
+    <Content Include="images\icons\small\grey\admin_user_2.png" />
+    <Content Include="images\icons\small\grey\airplane.png" />
+    <Content Include="images\icons\small\grey\alarm_bell.png" />
+    <Content Include="images\icons\small\grey\alarm_bell_2.png" />
+    <Content Include="images\icons\small\grey\alarm_clock.png" />
+    <Content Include="images\icons\small\grey\alert.png" />
+    <Content Include="images\icons\small\grey\alert_2.png" />
+    <Content Include="images\icons\small\grey\android.png" />
+    <Content Include="images\icons\small\grey\apartment_building.png" />
+    <Content Include="images\icons\small\grey\archive.png" />
+    <Content Include="images\icons\small\grey\bag.png" />
+    <Content Include="images\icons\small\grey\balloons.png" />
+    <Content Include="images\icons\small\grey\bandaid.png" />
+    <Content Include="images\icons\small\grey\battery.png" />
+    <Content Include="images\icons\small\grey\battery_almost_empty.png" />
+    <Content Include="images\icons\small\grey\battery_almost_full.png" />
+    <Content Include="images\icons\small\grey\battery_empty.png" />
+    <Content Include="images\icons\small\grey\battery_full.png" />
+    <Content Include="images\icons\small\grey\bended_arrow_down.png" />
+    <Content Include="images\icons\small\grey\bended_arrow_left.png" />
+    <Content Include="images\icons\small\grey\bended_arrow_right.png" />
+    <Content Include="images\icons\small\grey\bended_arrow_up.png" />
+    <Content Include="images\icons\small\grey\big_brush.png" />
+    <Content Include="images\icons\small\grey\blackberry.png" />
+    <Content Include="images\icons\small\grey\blocks_images.png" />
+    <Content Include="images\icons\small\grey\bluetooth.png" />
+    <Content Include="images\icons\small\grey\bluetooth_2.png" />
+    <Content Include="images\icons\small\grey\blu_ray.png" />
+    <Content Include="images\icons\small\grey\book.png" />
+    <Content Include="images\icons\small\grey\books.png" />
+    <Content Include="images\icons\small\grey\book_large.png" />
+    <Content Include="images\icons\small\grey\box_incoming.png" />
+    <Content Include="images\icons\small\grey\box_outgoing.png" />
+    <Content Include="images\icons\small\grey\bulls_eye.png" />
+    <Content Include="images\icons\small\grey\calculator.png" />
+    <Content Include="images\icons\small\grey\camera.png" />
+    <Content Include="images\icons\small\grey\camera_2.png" />
+    <Content Include="images\icons\small\grey\car.png" />
+    <Content Include="images\icons\small\grey\cash_register.png" />
+    <Content Include="images\icons\small\grey\cassette.png" />
+    <Content Include="images\icons\small\grey\cat.png" />
+    <Content Include="images\icons\small\grey\cd.png" />
+    <Content Include="images\icons\small\grey\chair.png" />
+    <Content Include="images\icons\small\grey\chart.png" />
+    <Content Include="images\icons\small\grey\chart_2.png" />
+    <Content Include="images\icons\small\grey\chart_3.png" />
+    <Content Include="images\icons\small\grey\chart_4.png" />
+    <Content Include="images\icons\small\grey\chart_5.png" />
+    <Content Include="images\icons\small\grey\chart_6.png" />
+    <Content Include="images\icons\small\grey\chart_7.png" />
+    <Content Include="images\icons\small\grey\chart_8.png" />
+    <Content Include="images\icons\small\grey\chemical.png" />
+    <Content Include="images\icons\small\grey\chrome.png" />
+    <Content Include="images\icons\small\grey\clipboard.png" />
+    <Content Include="images\icons\small\grey\clock.png" />
+    <Content Include="images\icons\small\grey\cloud.png" />
+    <Content Include="images\icons\small\grey\cloud_download.png" />
+    <Content Include="images\icons\small\grey\cloud_upload.png" />
+    <Content Include="images\icons\small\grey\cog.png" />
+    <Content Include="images\icons\small\grey\cog_2.png" />
+    <Content Include="images\icons\small\grey\cog_3.png" />
+    <Content Include="images\icons\small\grey\cog_4.png" />
+    <Content Include="images\icons\small\grey\companies.png" />
+    <Content Include="images\icons\small\grey\computer_imac.png" />
+    <Content Include="images\icons\small\grey\coverflow.png" />
+    <Content Include="images\icons\small\grey\create_write.png" />
+    <Content Include="images\icons\small\grey\cup.png" />
+    <Content Include="images\icons\small\grey\cut_scissors.png" />
+    <Content Include="images\icons\small\grey\day_calendar.png" />
+    <Content Include="images\icons\small\grey\delicious.png" />
+    <Content Include="images\icons\small\grey\digg.png" />
+    <Content Include="images\icons\small\grey\digg_2.png" />
+    <Content Include="images\icons\small\grey\document.png" />
+    <Content Include="images\icons\small\grey\documents.png" />
+    <Content Include="images\icons\small\grey\download.png" />
+    <Content Include="images\icons\small\grey\download_to_computer.png" />
+    <Content Include="images\icons\small\grey\dress.png" />
+    <Content Include="images\icons\small\grey\dribbble.png" />
+    <Content Include="images\icons\small\grey\dribbble_2.png" />
+    <Content Include="images\icons\small\grey\dropbox.png" />
+    <Content Include="images\icons\small\grey\drupal.png" />
+    <Content Include="images\icons\small\grey\dvd.png" />
+    <Content Include="images\icons\small\grey\electricity_input.png" />
+    <Content Include="images\icons\small\grey\electricity_plug.png" />
+    <Content Include="images\icons\small\grey\excel_document.png" />
+    <Content Include="images\icons\small\grey\excel_documents.png" />
+    <Content Include="images\icons\small\grey\exit.png" />
+    <Content Include="images\icons\small\grey\expose.png" />
+    <Content Include="images\icons\small\grey\expression_engine.png" />
+    <Content Include="images\icons\small\grey\eyedropper.png" />
+    <Content Include="images\icons\small\grey\facebook.png" />
+    <Content Include="images\icons\small\grey\facebook_like.png" />
+    <Content Include="images\icons\small\grey\fax.png" />
+    <Content Include="images\icons\small\grey\female_contour.png" />
+    <Content Include="images\icons\small\grey\female_symbol.png" />
+    <Content Include="images\icons\small\grey\file_cabinet.png" />
+    <Content Include="images\icons\small\grey\film_camera.png" />
+    <Content Include="images\icons\small\grey\film_strip.png" />
+    <Content Include="images\icons\small\grey\film_strip_2.png" />
+    <Content Include="images\icons\small\grey\finish_flag.png" />
+    <Content Include="images\icons\small\grey\firefox.png" />
+    <Content Include="images\icons\small\grey\flag.png" />
+    <Content Include="images\icons\small\grey\flag_2.png" />
+    <Content Include="images\icons\small\grey\folder.png" />
+    <Content Include="images\icons\small\grey\footprints.png" />
+    <Content Include="images\icons\small\grey\fountain_pen.png" />
+    <Content Include="images\icons\small\grey\frames.png" />
+    <Content Include="images\icons\small\grey\globe.png" />
+    <Content Include="images\icons\small\grey\globe_2.png" />
+    <Content Include="images\icons\small\grey\google_buzz.png" />
+    <Content Include="images\icons\small\grey\google_maps.png" />
+    <Content Include="images\icons\small\grey\go_back_from_full_screen.png" />
+    <Content Include="images\icons\small\grey\go_back_from_screen.png" />
+    <Content Include="images\icons\small\grey\go_full_screen.png" />
+    <Content Include="images\icons\small\grey\graph.png" />
+    <Content Include="images\icons\small\grey\hd.png" />
+    <Content Include="images\icons\small\grey\hd_2.png" />
+    <Content Include="images\icons\small\grey\hd_3.png" />
+    <Content Include="images\icons\small\grey\headphones.png" />
+    <Content Include="images\icons\small\grey\help.png" />
+    <Content Include="images\icons\small\grey\home.png" />
+    <Content Include="images\icons\small\grey\home_2.png" />
+    <Content Include="images\icons\small\grey\ice_cream.png" />
+    <Content Include="images\icons\small\grey\ice_cream_2.png" />
+    <Content Include="images\icons\small\grey\ichat.png" />
+    <Content Include="images\icons\small\grey\image.png" />
+    <Content Include="images\icons\small\grey\image2_2.png" />
+    <Content Include="images\icons\small\grey\images.png" />
+    <Content Include="images\icons\small\grey\image_2.png" />
+    <Content Include="images\icons\small\grey\inbox.png" />
+    <Content Include="images\icons\small\grey\info_about.png" />
+    <Content Include="images\icons\small\grey\ipad.png" />
+    <Content Include="images\icons\small\grey\iphone_3g.png" />
+    <Content Include="images\icons\small\grey\iphone_4.png" />
+    <Content Include="images\icons\small\grey\ipod_classic.png" />
+    <Content Include="images\icons\small\grey\ipod_nano.png" />
+    <Content Include="images\icons\small\grey\joomla.png" />
+    <Content Include="images\icons\small\grey\key.png" />
+    <Content Include="images\icons\small\grey\key_2.png" />
+    <Content Include="images\icons\small\grey\ladies_purse.png" />
+    <Content Include="images\icons\small\grey\lamp.png" />
+    <Content Include="images\icons\small\grey\laptop.png" />
+    <Content Include="images\icons\small\grey\lastfm_2.png" />
+    <Content Include="images\icons\small\grey\lemonade_stand.png" />
+    <Content Include="images\icons\small\grey\light_bulb.png" />
+    <Content Include="images\icons\small\grey\link.png" />
+    <Content Include="images\icons\small\grey\link_2.png" />
+    <Content Include="images\icons\small\grey\linux.png" />
+    <Content Include="images\icons\small\grey\list.png" />
+    <Content Include="images\icons\small\grey\list_w_image.png" />
+    <Content Include="images\icons\small\grey\list_w_images.png" />
+    <Content Include="images\icons\small\grey\loading_bar.png" />
+    <Content Include="images\icons\small\grey\locked.png" />
+    <Content Include="images\icons\small\grey\locked_2.png" />
+    <Content Include="images\icons\small\grey\macos.png" />
+    <Content Include="images\icons\small\grey\magic_mouse.png" />
+    <Content Include="images\icons\small\grey\magnifying_glass.png" />
+    <Content Include="images\icons\small\grey\mail.png" />
+    <Content Include="images\icons\small\grey\male_contour.png" />
+    <Content Include="images\icons\small\grey\male_symbol.png" />
+    <Content Include="images\icons\small\grey\map.png" />
+    <Content Include="images\icons\small\grey\marker.png" />
+    <Content Include="images\icons\small\grey\medical_case.png" />
+    <Content Include="images\icons\small\grey\megaphone.png" />
+    <Content Include="images\icons\small\grey\microphone.png" />
+    <Content Include="images\icons\small\grey\mighty_mouse.png" />
+    <Content Include="images\icons\small\grey\mobile_phone.png" />
+    <Content Include="images\icons\small\grey\mobypicture.png" />
+    <Content Include="images\icons\small\grey\money.png" />
+    <Content Include="images\icons\small\grey\money_2.png" />
+    <Content Include="images\icons\small\grey\monitor.png" />
+    <Content Include="images\icons\small\grey\month_calendar.png" />
+    <Content Include="images\icons\small\grey\mouse_wires.png" />
+    <Content Include="images\icons\small\grey\myspace_2.png" />
+    <Content Include="images\icons\small\grey\note_book.png" />
+    <Content Include="images\icons\small\grey\pacman.png" />
+    <Content Include="images\icons\small\grey\pacman_ghost.png" />
+    <Content Include="images\icons\small\grey\paint_brush.png" />
+    <Content Include="images\icons\small\grey\pants.png" />
+    <Content Include="images\icons\small\grey\paperclip.png" />
+    <Content Include="images\icons\small\grey\paypal.png" />
+    <Content Include="images\icons\small\grey\paypal_2.png" />
+    <Content Include="images\icons\small\grey\paypal_3.png" />
+    <Content Include="images\icons\small\grey\pdf_document.png" />
+    <Content Include="images\icons\small\grey\pdf_documents.png" />
+    <Content Include="images\icons\small\grey\pencil.png" />
+    <Content Include="images\icons\small\grey\phone.png" />
+    <Content Include="images\icons\small\grey\phone_3.png" />
+    <Content Include="images\icons\small\grey\phone_hook.png" />
+    <Content Include="images\icons\small\grey\piggy_bank.png" />
+    <Content Include="images\icons\small\grey\plane_suitcase.png" />
+    <Content Include="images\icons\small\grey\plixi.png" />
+    <Content Include="images\icons\small\grey\post_card.png" />
+    <Content Include="images\icons\small\grey\power.png" />
+    <Content Include="images\icons\small\grey\powerpoint_document.png" />
+    <Content Include="images\icons\small\grey\powerpoint_documents.png" />
+    <Content Include="images\icons\small\grey\presentation.png" />
+    <Content Include="images\icons\small\grey\preview.png" />
+    <Content Include="images\icons\small\grey\price_tag.png" />
+    <Content Include="images\icons\small\grey\price_tags.png" />
+    <Content Include="images\icons\small\grey\printer.png" />
+    <Content Include="images\icons\small\grey\radio.png" />
+    <Content Include="images\icons\small\grey\record.png" />
+    <Content Include="images\icons\small\grey\recycle_symbol.png" />
+    <Content Include="images\icons\small\grey\refresh.png" />
+    <Content Include="images\icons\small\grey\refresh_2.png" />
+    <Content Include="images\icons\small\grey\refresh_3.png" />
+    <Content Include="images\icons\small\grey\refresh_4.png" />
+    <Content Include="images\icons\small\grey\repeat.png" />
+    <Content Include="images\icons\small\grey\robot.png" />
+    <Content Include="images\icons\small\grey\rss.png" />
+    <Content Include="images\icons\small\grey\ruler.png" />
+    <Content Include="images\icons\small\grey\ruler_2.png" />
+    <Content Include="images\icons\small\grey\running_man.png" />
+    <Content Include="images\icons\small\grey\safari.png" />
+    <Content Include="images\icons\small\grey\scan_label_2.png" />
+    <Content Include="images\icons\small\grey\sd.png" />
+    <Content Include="images\icons\small\grey\sd_2.png" />
+    <Content Include="images\icons\small\grey\sd_3.png" />
+    <Content Include="images\icons\small\grey\settings.png" />
+    <Content Include="images\icons\small\grey\settings_2.png" />
+    <Content Include="images\icons\small\grey\shopping_bag.png" />
+    <Content Include="images\icons\small\grey\shopping_basket_1.png" />
+    <Content Include="images\icons\small\grey\shopping_basket_2.png" />
+    <Content Include="images\icons\small\grey\shopping_cart.png" />
+    <Content Include="images\icons\small\grey\shopping_cart_2.png" />
+    <Content Include="images\icons\small\grey\shopping_cart_3.png" />
+    <Content Include="images\icons\small\grey\shopping_cart_4.png" />
+    <Content Include="images\icons\small\grey\shuffle.png" />
+    <Content Include="images\icons\small\grey\sign_post.png" />
+    <Content Include="images\icons\small\grey\skype.png" />
+    <Content Include="images\icons\small\grey\sleeveless_shirt.png" />
+    <Content Include="images\icons\small\grey\small_brush.png" />
+    <Content Include="images\icons\small\grey\socks.png" />
+    <Content Include="images\icons\small\grey\sound.png" />
+    <Content Include="images\icons\small\grey\speech_bubble.png" />
+    <Content Include="images\icons\small\grey\speech_bubbles.png" />
+    <Content Include="images\icons\small\grey\speech_bubbles_2.png" />
+    <Content Include="images\icons\small\grey\speech_bubble_2.png" />
+    <Content Include="images\icons\small\grey\sport_shirt.png" />
+    <Content Include="images\icons\small\grey\stop_watch.png" />
+    <Content Include="images\icons\small\grey\strategy.png" />
+    <Content Include="images\icons\small\grey\strategy_2.png" />
+    <Content Include="images\icons\small\grey\stubleupon.png" />
+    <Content Include="images\icons\small\grey\suitcase.png" />
+    <Content Include="images\icons\small\grey\sweater.png" />
+    <Content Include="images\icons\small\grey\table.png" />
+    <Content Include="images\icons\small\grey\tag.png" />
+    <Content Include="images\icons\small\grey\tags_2.png" />
+    <Content Include="images\icons\small\grey\television.png" />
+    <Content Include="images\icons\small\grey\timer.png" />
+    <Content Include="images\icons\small\grey\trashcan.png" />
+    <Content Include="images\icons\small\grey\trashcan_2.png" />
+    <Content Include="images\icons\small\grey\travel_suitcase.png" />
+    <Content Include="images\icons\small\grey\tree.png" />
+    <Content Include="images\icons\small\grey\trolly.png" />
+    <Content Include="images\icons\small\grey\truck.png" />
+    <Content Include="images\icons\small\grey\tumbler.png" />
+    <Content Include="images\icons\small\grey\twitter.png" />
+    <Content Include="images\icons\small\grey\twitter_2.png" />
+    <Content Include="images\icons\small\grey\t_shirt.png" />
+    <Content Include="images\icons\small\grey\umbrella.png" />
+    <Content Include="images\icons\small\grey\under_construction.png" />
+    <Content Include="images\icons\small\grey\unlocked.png" />
+    <Content Include="images\icons\small\grey\upload.png" />
+    <Content Include="images\icons\small\grey\user.png" />
+    <Content Include="images\icons\small\grey\users.png" />
+    <Content Include="images\icons\small\grey\users_2.png" />
+    <Content Include="images\icons\small\grey\user_2.png" />
+    <Content Include="images\icons\small\grey\user_comment.png" />
+    <Content Include="images\icons\small\grey\vault.png" />
+    <Content Include="images\icons\small\grey\vimeo.png" />
+    <Content Include="images\icons\small\grey\vimeo_2.png" />
+    <Content Include="images\icons\small\grey\v_card.png" />
+    <Content Include="images\icons\small\grey\v_card_2.png" />
+    <Content Include="images\icons\small\grey\walking_man.png" />
+    <Content Include="images\icons\small\grey\wifi_signal.png" />
+    <Content Include="images\icons\small\grey\wifi_signal_2.png" />
+    <Content Include="images\icons\small\grey\windows.png" />
+    <Content Include="images\icons\small\grey\winner_podium.png" />
+    <Content Include="images\icons\small\grey\wordpress.png" />
+    <Content Include="images\icons\small\grey\wordpress_2.png" />
+    <Content Include="images\icons\small\grey\word_document.png" />
+    <Content Include="images\icons\small\grey\word_documents.png" />
+    <Content Include="images\icons\small\grey\youtube.png" />
+    <Content Include="images\icons\small\grey\youtube_2.png" />
+    <Content Include="images\icons\small\grey\zip_file.png" />
+    <Content Include="images\icons\small\grey\zip_files.png" />
+    <Content Include="images\icons\small\white\abacus.png" />
+    <Content Include="images\icons\small\white\acces_denied_sign.png" />
+    <Content Include="images\icons\small\white\address_book.png" />
+    <Content Include="images\icons\small\white\admin_user.png" />
+    <Content Include="images\icons\small\white\admin_user_2.png" />
+    <Content Include="images\icons\small\white\airplane.png" />
+    <Content Include="images\icons\small\white\alarm_bell.png" />
+    <Content Include="images\icons\small\white\alarm_bell_2.png" />
+    <Content Include="images\icons\small\white\alarm_clock.png" />
+    <Content Include="images\icons\small\white\alert.png" />
+    <Content Include="images\icons\small\white\alert_2.png" />
+    <Content Include="images\icons\small\white\android.png" />
+    <Content Include="images\icons\small\white\apartment_building.png" />
+    <Content Include="images\icons\small\white\archive.png" />
+    <Content Include="images\icons\small\white\bag.png" />
+    <Content Include="images\icons\small\white\balloons.png" />
+    <Content Include="images\icons\small\white\bandaid.png" />
+    <Content Include="images\icons\small\white\battery.png" />
+    <Content Include="images\icons\small\white\battery_almost_empty.png" />
+    <Content Include="images\icons\small\white\battery_almost_full.png" />
+    <Content Include="images\icons\small\white\battery_empty.png" />
+    <Content Include="images\icons\small\white\battery_full.png" />
+    <Content Include="images\icons\small\white\bended_arrow_down.png" />
+    <Content Include="images\icons\small\white\bended_arrow_left.png" />
+    <Content Include="images\icons\small\white\bended_arrow_right.png" />
+    <Content Include="images\icons\small\white\bended_arrow_up.png" />
+    <Content Include="images\icons\small\white\big_brush.png" />
+    <Content Include="images\icons\small\white\blackberry.png" />
+    <Content Include="images\icons\small\white\blocks_images.png" />
+    <Content Include="images\icons\small\white\bluetooth.png" />
+    <Content Include="images\icons\small\white\bluetooth_2.png" />
+    <Content Include="images\icons\small\white\blu_ray.png" />
+    <Content Include="images\icons\small\white\book.png" />
+    <Content Include="images\icons\small\white\books.png" />
+    <Content Include="images\icons\small\white\book_large.png" />
+    <Content Include="images\icons\small\white\box_incoming.png" />
+    <Content Include="images\icons\small\white\box_outgoing.png" />
+    <Content Include="images\icons\small\white\bulls_eye.png" />
+    <Content Include="images\icons\small\white\calculator.png" />
+    <Content Include="images\icons\small\white\camera.png" />
+    <Content Include="images\icons\small\white\camera_2.png" />
+    <Content Include="images\icons\small\white\car.png" />
+    <Content Include="images\icons\small\white\cash_register.png" />
+    <Content Include="images\icons\small\white\cassette.png" />
+    <Content Include="images\icons\small\white\cat.png" />
+    <Content Include="images\icons\small\white\cd.png" />
+    <Content Include="images\icons\small\white\chair.png" />
+    <Content Include="images\icons\small\white\chart.png" />
+    <Content Include="images\icons\small\white\chart_2.png" />
+    <Content Include="images\icons\small\white\chart_3.png" />
+    <Content Include="images\icons\small\white\chart_4.png" />
+    <Content Include="images\icons\small\white\chart_5.png" />
+    <Content Include="images\icons\small\white\chart_6.png" />
+    <Content Include="images\icons\small\white\chart_7.png" />
+    <Content Include="images\icons\small\white\chart_8.png" />
+    <Content Include="images\icons\small\white\chemical.png" />
+    <Content Include="images\icons\small\white\chrome.png" />
+    <Content Include="images\icons\small\white\clipboard.png" />
+    <Content Include="images\icons\small\white\clock.png" />
+    <Content Include="images\icons\small\white\cloud.png" />
+    <Content Include="images\icons\small\white\cloud_download.png" />
+    <Content Include="images\icons\small\white\cloud_upload.png" />
+    <Content Include="images\icons\small\white\cog.png" />
+    <Content Include="images\icons\small\white\cog_2.png" />
+    <Content Include="images\icons\small\white\cog_3.png" />
+    <Content Include="images\icons\small\white\cog_4.png" />
+    <Content Include="images\icons\small\white\companies.png" />
+    <Content Include="images\icons\small\white\computer_imac.png" />
+    <Content Include="images\icons\small\white\coverflow.png" />
+    <Content Include="images\icons\small\white\create_write.png" />
+    <Content Include="images\icons\small\white\cup.png" />
+    <Content Include="images\icons\small\white\cut_scissors.png" />
+    <Content Include="images\icons\small\white\day_calendar.png" />
+    <Content Include="images\icons\small\white\delicious.png" />
+    <Content Include="images\icons\small\white\digg.png" />
+    <Content Include="images\icons\small\white\digg_2.png" />
+    <Content Include="images\icons\small\white\document.png" />
+    <Content Include="images\icons\small\white\documents.png" />
+    <Content Include="images\icons\small\white\download.png" />
+    <Content Include="images\icons\small\white\download_to_computer.png" />
+    <Content Include="images\icons\small\white\dress.png" />
+    <Content Include="images\icons\small\white\dribbble.png" />
+    <Content Include="images\icons\small\white\dribbble_2.png" />
+    <Content Include="images\icons\small\white\dropbox.png" />
+    <Content Include="images\icons\small\white\drupal.png" />
+    <Content Include="images\icons\small\white\dvd.png" />
+    <Content Include="images\icons\small\white\electricity_input.png" />
+    <Content Include="images\icons\small\white\electricity_plug.png" />
+    <Content Include="images\icons\small\white\excel_document.png" />
+    <Content Include="images\icons\small\white\excel_documents.png" />
+    <Content Include="images\icons\small\white\exit.png" />
+    <Content Include="images\icons\small\white\expose.png" />
+    <Content Include="images\icons\small\white\expression_engine.png" />
+    <Content Include="images\icons\small\white\eyedropper.png" />
+    <Content Include="images\icons\small\white\facebook.png" />
+    <Content Include="images\icons\small\white\facebook_like.png" />
+    <Content Include="images\icons\small\white\fax.png" />
+    <Content Include="images\icons\small\white\female_contour.png" />
+    <Content Include="images\icons\small\white\female_symbol.png" />
+    <Content Include="images\icons\small\white\file_cabinet.png" />
+    <Content Include="images\icons\small\white\film_camera.png" />
+    <Content Include="images\icons\small\white\film_strip.png" />
+    <Content Include="images\icons\small\white\film_strip_2.png" />
+    <Content Include="images\icons\small\white\finish_flag.png" />
+    <Content Include="images\icons\small\white\firefox.png" />
+    <Content Include="images\icons\small\white\flag.png" />
+    <Content Include="images\icons\small\white\flag_2.png" />
+    <Content Include="images\icons\small\white\folder.png" />
+    <Content Include="images\icons\small\white\footprints.png" />
+    <Content Include="images\icons\small\white\fountain_pen.png" />
+    <Content Include="images\icons\small\white\frames.png" />
+    <Content Include="images\icons\small\white\globe.png" />
+    <Content Include="images\icons\small\white\globe_2.png" />
+    <Content Include="images\icons\small\white\google_buzz.png" />
+    <Content Include="images\icons\small\white\google_maps.png" />
+    <Content Include="images\icons\small\white\go_back_from_full_screen.png" />
+    <Content Include="images\icons\small\white\go_back_from_screen.png" />
+    <Content Include="images\icons\small\white\go_full_screen.png" />
+    <Content Include="images\icons\small\white\graph.png" />
+    <Content Include="images\icons\small\white\hd.png" />
+    <Content Include="images\icons\small\white\hd_2.png" />
+    <Content Include="images\icons\small\white\hd_3.png" />
+    <Content Include="images\icons\small\white\headphones.png" />
+    <Content Include="images\icons\small\white\help.png" />
+    <Content Include="images\icons\small\white\home.png" />
+    <Content Include="images\icons\small\white\home_2.png" />
+    <Content Include="images\icons\small\white\ice_cream.png" />
+    <Content Include="images\icons\small\white\ice_cream_2.png" />
+    <Content Include="images\icons\small\white\ichat.png" />
+    <Content Include="images\icons\small\white\image.png" />
+    <Content Include="images\icons\small\white\image2_2.png" />
+    <Content Include="images\icons\small\white\images.png" />
+    <Content Include="images\icons\small\white\image_2.png" />
+    <Content Include="images\icons\small\white\inbox.png" />
+    <Content Include="images\icons\small\white\info_about.png" />
+    <Content Include="images\icons\small\white\ipad.png" />
+    <Content Include="images\icons\small\white\iphone_3g.png" />
+    <Content Include="images\icons\small\white\iphone_4.png" />
+    <Content Include="images\icons\small\white\ipod_classic.png" />
+    <Content Include="images\icons\small\white\ipod_nano.png" />
+    <Content Include="images\icons\small\white\joomla.png" />
+    <Content Include="images\icons\small\white\key.png" />
+    <Content Include="images\icons\small\white\key_2.png" />
+    <Content Include="images\icons\small\white\ladies_purse.png" />
+    <Content Include="images\icons\small\white\lamp.png" />
+    <Content Include="images\icons\small\white\laptop.png" />
+    <Content Include="images\icons\small\white\lastfm_2.png" />
+    <Content Include="images\icons\small\white\lemonade_stand.png" />
+    <Content Include="images\icons\small\white\light_bulb.png" />
+    <Content Include="images\icons\small\white\link.png" />
+    <Content Include="images\icons\small\white\link_2.png" />
+    <Content Include="images\icons\small\white\linux.png" />
+    <Content Include="images\icons\small\white\list.png" />
+    <Content Include="images\icons\small\white\list_w_image.png" />
+    <Content Include="images\icons\small\white\list_w_images.png" />
+    <Content Include="images\icons\small\white\loading_bar.png" />
+    <Content Include="images\icons\small\white\locked.png" />
+    <Content Include="images\icons\small\white\locked_2.png" />
+    <Content Include="images\icons\small\white\macos.png" />
+    <Content Include="images\icons\small\white\magic_mouse.png" />
+    <Content Include="images\icons\small\white\magnifying_glass.png" />
+    <Content Include="images\icons\small\white\mail.png" />
+    <Content Include="images\icons\small\white\male_contour.png" />
+    <Content Include="images\icons\small\white\male_symbol.png" />
+    <Content Include="images\icons\small\white\map.png" />
+    <Content Include="images\icons\small\white\marker.png" />
+    <Content Include="images\icons\small\white\medical_case.png" />
+    <Content Include="images\icons\small\white\megaphone.png" />
+    <Content Include="images\icons\small\white\microphone.png" />
+    <Content Include="images\icons\small\white\mighty_mouse.png" />
+    <Content Include="images\icons\small\white\mobile_phone.png" />
+    <Content Include="images\icons\small\white\mobypicture.png" />
+    <Content Include="images\icons\small\white\money.png" />
+    <Content Include="images\icons\small\white\money_2.png" />
+    <Content Include="images\icons\small\white\monitor.png" />
+    <Content Include="images\icons\small\white\month_calendar.png" />
+    <Content Include="images\icons\small\white\mouse_wires.png" />
+    <Content Include="images\icons\small\white\myspace_2.png" />
+    <Content Include="images\icons\small\white\note_book.png" />
+    <Content Include="images\icons\small\white\pacman.png" />
+    <Content Include="images\icons\small\white\pacman_ghost.png" />
+    <Content Include="images\icons\small\white\paint_brush.png" />
+    <Content Include="images\icons\small\white\pants.png" />
+    <Content Include="images\icons\small\white\paperclip.png" />
+    <Content Include="images\icons\small\white\paypal.png" />
+    <Content Include="images\icons\small\white\paypal_2.png" />
+    <Content Include="images\icons\small\white\paypal_3.png" />
+    <Content Include="images\icons\small\white\pdf_document.png" />
+    <Content Include="images\icons\small\white\pdf_documents.png" />
+    <Content Include="images\icons\small\white\pencil.png" />
+    <Content Include="images\icons\small\white\phone.png" />
+    <Content Include="images\icons\small\white\phone_3.png" />
+    <Content Include="images\icons\small\white\phone_hook.png" />
+    <Content Include="images\icons\small\white\piggy_bank.png" />
+    <Content Include="images\icons\small\white\plane_suitcase.png" />
+    <Content Include="images\icons\small\white\plixi.png" />
+    <Content Include="images\icons\small\white\post_card.png" />
+    <Content Include="images\icons\small\white\power.png" />
+    <Content Include="images\icons\small\white\powerpoint_document.png" />
+    <Content Include="images\icons\small\white\powerpoint_documents.png" />
+    <Content Include="images\icons\small\white\presentation.png" />
+    <Content Include="images\icons\small\white\preview.png" />
+    <Content Include="images\icons\small\white\price_tag.png" />
+    <Content Include="images\icons\small\white\price_tags.png" />
+    <Content Include="images\icons\small\white\printer.png" />
+    <Content Include="images\icons\small\white\radio.png" />
+    <Content Include="images\icons\small\white\record.png" />
+    <Content Include="images\icons\small\white\recycle_symbol.png" />
+    <Content Include="images\icons\small\white\refresh.png" />
+    <Content Include="images\icons\small\white\refresh_2.png" />
+    <Content Include="images\icons\small\white\refresh_3.png" />
+    <Content Include="images\icons\small\white\refresh_4.png" />
+    <Content Include="images\icons\small\white\repeat.png" />
+    <Content Include="images\icons\small\white\robot.png" />
+    <Content Include="images\icons\small\white\rss.png" />
+    <Content Include="images\icons\small\white\ruler.png" />
+    <Content Include="images\icons\small\white\ruler_2.png" />
+    <Content Include="images\icons\small\white\running_man.png" />
+    <Content Include="images\icons\small\white\safari.png" />
+    <Content Include="images\icons\small\white\scan_label_2.png" />
+    <Content Include="images\icons\small\white\sd.png" />
+    <Content Include="images\icons\small\white\sd_2.png" />
+    <Content Include="images\icons\small\white\sd_3.png" />
+    <Content Include="images\icons\small\white\settings.png" />
+    <Content Include="images\icons\small\white\settings_2.png" />
+    <Content Include="images\icons\small\white\shopping_bag.png" />
+    <Content Include="images\icons\small\white\shopping_basket_1.png" />
+    <Content Include="images\icons\small\white\shopping_basket_2.png" />
+    <Content Include="images\icons\small\white\shopping_cart.png" />
+    <Content Include="images\icons\small\white\shopping_cart_2.png" />
+    <Content Include="images\icons\small\white\shopping_cart_3.png" />
+    <Content Include="images\icons\small\white\shopping_cart_4.png" />
+    <Content Include="images\icons\small\white\shuffle.png" />
+    <Content Include="images\icons\small\white\sign_post.png" />
+    <Content Include="images\icons\small\white\skype.png" />
+    <Content Include="images\icons\small\white\sleeveless_shirt.png" />
+    <Content Include="images\icons\small\white\small_brush.png" />
+    <Content Include="images\icons\small\white\socks.png" />
+    <Content Include="images\icons\small\white\sound.png" />
+    <Content Include="images\icons\small\white\speech_bubble.png" />
+    <Content Include="images\icons\small\white\speech_bubbles.png" />
+    <Content Include="images\icons\small\white\speech_bubbles_2.png" />
+    <Content Include="images\icons\small\white\speech_bubble_2.png" />
+    <Content Include="images\icons\small\white\sport_shirt.png" />
+    <Content Include="images\icons\small\white\stop_watch.png" />
+    <Content Include="images\icons\small\white\strategy.png" />
+    <Content Include="images\icons\small\white\strategy_2.png" />
+    <Content Include="images\icons\small\white\stubleupon.png" />
+    <Content Include="images\icons\small\white\suitcase.png" />
+    <Content Include="images\icons\small\white\sweater.png" />
+    <Content Include="images\icons\small\white\table.png" />
+    <Content Include="images\icons\small\white\tag.png" />
+    <Content Include="images\icons\small\white\tags_2.png" />
+    <Content Include="images\icons\small\white\television.png" />
+    <Content Include="images\icons\small\white\timer.png" />
+    <Content Include="images\icons\small\white\trashcan.png" />
+    <Content Include="images\icons\small\white\trashcan_2.png" />
+    <Content Include="images\icons\small\white\travel_suitcase.png" />
+    <Content Include="images\icons\small\white\tree.png" />
+    <Content Include="images\icons\small\white\trolly.png" />
+    <Content Include="images\icons\small\white\truck.png" />
+    <Content Include="images\icons\small\white\tumbler.png" />
+    <Content Include="images\icons\small\white\twitter.png" />
+    <Content Include="images\icons\small\white\twitter_2.png" />
+    <Content Include="images\icons\small\white\t_shirt.png" />
+    <Content Include="images\icons\small\white\umbrella.png" />
+    <Content Include="images\icons\small\white\under_construction.png" />
+    <Content Include="images\icons\small\white\unlocked.png" />
+    <Content Include="images\icons\small\white\upload.png" />
+    <Content Include="images\icons\small\white\user.png" />
+    <Content Include="images\icons\small\white\users.png" />
+    <Content Include="images\icons\small\white\users_2.png" />
+    <Content Include="images\icons\small\white\user_2.png" />
+    <Content Include="images\icons\small\white\user_comment.png" />
+    <Content Include="images\icons\small\white\vault.png" />
+    <Content Include="images\icons\small\white\vimeo.png" />
+    <Content Include="images\icons\small\white\vimeo_2.png" />
+    <Content Include="images\icons\small\white\v_card.png" />
+    <Content Include="images\icons\small\white\v_card_2.png" />
+    <Content Include="images\icons\small\white\walking_man.png" />
+    <Content Include="images\icons\small\white\wifi_signal.png" />
+    <Content Include="images\icons\small\white\wifi_signal_2.png" />
+    <Content Include="images\icons\small\white\windows.png" />
+    <Content Include="images\icons\small\white\winner_podium.png" />
+    <Content Include="images\icons\small\white\wordpress.png" />
+    <Content Include="images\icons\small\white\wordpress_2.png" />
+    <Content Include="images\icons\small\white\word_document.png" />
+    <Content Include="images\icons\small\white\word_documents.png" />
+    <Content Include="images\icons\small\white\youtube.png" />
+    <Content Include="images\icons\small\white\youtube_2.png" />
+    <Content Include="images\icons\small\white\zip_file.png" />
+    <Content Include="images\icons\small\white\zip_files.png" />
+    <Content Include="images\interface\adminca_ad_4.png" />
+    <Content Include="images\interface\adminica.png" />
+    <Content Include="images\interface\adminica_logo_black-trans.png" />
+    <Content Include="images\interface\adminica_logo_blue-trans.png" />
+    <Content Include="images\interface\adminica_logo_brown-trans.png" />
+    <Content Include="images\interface\adminica_logo_green-trans.png" />
+    <Content Include="images\interface\adminica_logo_magenta-trans.png" />
+    <Content Include="images\interface\adminica_logo_navy-trans.png" />
+    <Content Include="images\interface\adminica_logo_red-trans.png" />
+    <Content Include="images\interface\blank.png" />
+    <Content Include="images\interface\breadcrumb_divider.png" />
+    <Content Include="images\interface\dropdown_triangle.png" />
+    <Content Include="images\interface\grabber-trans.png" />
+    <Content Include="images\interface\grey_bar.png" />
+    <Content Include="images\interface\grey_noise.png" />
+    <Content Include="images\interface\indent_ie.png" />
+    <Content Include="images\interface\input_required.png" />
+    <Content Include="images\interface\input_required_large.png" />
+    <Content Include="images\interface\iOS_icon.png" />
+    <Content Include="images\interface\light_logo.png" />
+    <Content Include="images\interface\list-import-badges.png" />
+    <Content Include="images\interface\lite_toggle.png" />
+    <Content Include="images\interface\loading.gif" />
+    <Content Include="images\interface\login_bottom_bar.png" />
+    <Content Include="images\interface\login_logo.png" />
+    <Content Include="images\interface\nav_current.png" />
+    <Content Include="images\interface\nav_minus.gif" />
+    <Content Include="images\interface\nav_plus.gif" />
+    <Content Include="images\interface\profile.jpg" />
+    <Content Include="images\interface\profile_small.png" />
+    <Content Include="images\interface\profile_small_bw.png" />
+    <Content Include="images\interface\search.png" />
+    <Content Include="images\interface\sidenav_tooth-trans.png" />
+    <Content Include="images\interface\slide_scroller.png" />
+    <Content Include="images\interface\success.png" />
+    <Content Include="images\interface\toggle.png" />
+    <Content Include="images\interface\trans_black.png" />
+    <Content Include="images\interface\trans_black_less.png" />
+    <Content Include="images\interface\unlock_slider.png" />
+    <Content Include="images\interface\zero_logo.png" />
+    <Content Include="images\plugins\bootstrap\glyphicons-halflings-white.png" />
+    <Content Include="images\plugins\bootstrap\glyphicons-halflings.png" />
+    <Content Include="index.aspx" />
+    <Content Include="scripts\adminica\adminica_load-min.js" />
+    <Content Include="scripts\adminica\adminica_load.js" />
+    <Content Include="scripts\adminica\adminica_mobile-min.js" />
+    <Content Include="scripts\adminica\adminica_mobile.js" />
+    <Content Include="scripts\adminica\adminica_ui-min.js" />
+    <Content Include="scripts\adminica\adminica_ui.js" />
+    <Content Include="scripts\bootstrap\bootstrap.js" />
+    <Content Include="scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="scripts\jquery\jquery-min.js" />
+    <Content Include="scripts\jquery\jquery.js" />
+    <Content Include="scripts\jquery\jqueryui-min.js" />
+    <Content Include="scripts\jquery\jqueryui.js" />
+    <Content Include="scripts\plugins-min.js" />
+    <Content Include="scripts\plugins.js" />
+    <Content Include="scripts\prefixfree\prefixfree-min.js" />
+    <Content Include="scripts\prefixfree\prefixfree.js" />
+    <Content Include="Sec_Okul.aspx" />
+    <Content Include="SifreGonder.aspx" />
+    <Content Include="styles\adminica\colours.css" />
+    <Content Include="styles\adminica\grid.css" />
+    <Content Include="styles\adminica\main.css" />
+    <Content Include="styles\adminica\mobile.css" />
+    <Content Include="styles\plugins\bootstrap\bootstrap-orig.css" />
+    <Content Include="styles\plugins\bootstrap\bootstrap-responsive.css" />
+    <Content Include="styles\plugins\bootstrap\bootstrap.css" />
+    <Content Include="styles\themes\bg_dark_wood.css" />
+    <Content Include="styles\themes\bg_honeycomb.css" />
+    <Content Include="styles\themes\bg_noise.css" />
+    <Content Include="styles\themes\bg_noise_zero.css" />
+    <Content Include="styles\themes\bg_punched.css" />
+    <Content Include="styles\themes\bg_silver.css" />
+    <Content Include="styles\themes\bg_squares.css" />
+    <Content Include="styles\themes\bg_stripes.css" />
+    <Content Include="styles\themes\bg_white_wood.css" />
+    <Content Include="styles\themes\bg_wood.css" />
+    <Content Include="styles\themes\bg_wunder.css" />
+    <Content Include="styles\themes\layout_fixed.css" />
+    <Content Include="styles\themes\nav_slideout.css" />
+    <Content Include="styles\themes\nav_stacks.css" />
+    <Content Include="styles\themes\nav_top.css" />
+    <Content Include="styles\themes\skin_light.css" />
+    <Content Include="styles\themes\switcher.css" />
+    <Content Include="styles\themes\theme_blue.css" />
+    <Content Include="styles\themes\theme_brown.css" />
+    <Content Include="styles\themes\theme_green.css" />
+    <Content Include="styles\themes\theme_magenta.css" />
+    <Content Include="styles\themes\theme_navy.css" />
+    <Content Include="styles\themes\theme_red.css" />
+    <Content Include="styles\ToolsFile.xml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Yonet_Branslar.aspx" />
+    <Content Include="Yonet_Dersler.aspx" />
+    <Content Include="Yonet_Haftalar.aspx" />
+    <Content Include="Yonet_Kurlar.aspx" />
+    <Content Include="Yonet_Ogrenciler.aspx" />
+    <Content Include="Yonet_Ogretmenler.aspx" />
+    <Content Include="Yonet_Okullar.aspx" />
+    <Content Include="Yonet_Resimler.aspx" />
+    <Content Include="Yonet_Siniflar.aspx" />
+    <Content Include="Yonet_Subeler.aspx" />
+    <Content Include="Yonet_TopluOgrenci.aspx" />
+    <Content Include="Yonet_TopluOgretmen.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ODS_SinavDegerlendirDiger.aspx.cs">
+      <DependentUpon>ODS_SinavDegerlendirDiger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_SinavDegerlendirDiger.aspx.designer.cs">
+      <DependentUpon>ODS_SinavDegerlendirDiger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_SinavTxtUp1.aspx.cs">
+      <DependentUpon>ODS_SinavTxtUp1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_SinavTxtUp1.aspx.designer.cs">
+      <DependentUpon>ODS_SinavTxtUp1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_Gelmeyenler.aspx.cs">
+      <DependentUpon>HKS_Gelmeyenler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_Gelmeyenler.aspx.designer.cs">
+      <DependentUpon>HKS_Gelmeyenler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_Davranislar.aspx.cs">
+      <DependentUpon>HKS_Davranislar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_Davranislar.aspx.designer.cs">
+      <DependentUpon>HKS_Davranislar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Davranislar.aspx.cs">
+      <DependentUpon>Yonet_Davranislar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Davranislar.aspx.designer.cs">
+      <DependentUpon>Yonet_Davranislar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_AraKarne1.aspx.cs">
+      <DependentUpon>RPR_AraKarne1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_AraKarne1.aspx.designer.cs">
+      <DependentUpon>RPR_AraKarne1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GNL_Ayarlar.aspx.cs">
+      <DependentUpon>GNL_Ayarlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GNL_Ayarlar.aspx.designer.cs">
+      <DependentUpon>GNL_Ayarlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GNL_Mesajlar.aspx.cs">
+      <DependentUpon>GNL_Mesajlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GNL_Mesajlar.aspx.designer.cs">
+      <DependentUpon>GNL_Mesajlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HEP_VeriGiris.aspx.cs">
+      <DependentUpon>HEP_VeriGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HEP_VeriGiris.aspx.designer.cs">
+      <DependentUpon>HEP_VeriGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_DegerEgitimi.aspx.cs">
+      <DependentUpon>HKS_DegerEgitimi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_DegerEgitimi.aspx.designer.cs">
+      <DependentUpon>HKS_DegerEgitimi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_HaftalikPlan.aspx.cs">
+      <DependentUpon>HKS_HaftalikPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_HaftalikPlan.aspx.designer.cs">
+      <DependentUpon>HKS_HaftalikPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_OdevSnc.aspx.cs">
+      <DependentUpon>HKS_OdevSnc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_OdevSnc.aspx.designer.cs">
+      <DependentUpon>HKS_OdevSnc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_OdevSnclar.aspx.cs">
+      <DependentUpon>HKS_OdevSnclar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_OdevSnclar.aspx.designer.cs">
+      <DependentUpon>HKS_OdevSnclar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_OzelNot.aspx.cs">
+      <DependentUpon>HKS_OzelNot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_OzelNot.aspx.designer.cs">
+      <DependentUpon>HKS_OzelNot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_OzelNotlar.aspx.cs">
+      <DependentUpon>HKS_OzelNotlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_OzelNotlar.aspx.designer.cs">
+      <DependentUpon>HKS_OzelNotlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index1.aspx.cs">
+      <DependentUpon>index1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index1.aspx.designer.cs">
+      <DependentUpon>index1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index2.aspx.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index2.aspx.designer.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrol\CVSReader.cs" />
+    <Compile Include="Kontrol\Fonk.cs" />
+    <Compile Include="Kontrol\Sms.cs" />
+    <Compile Include="KRN_Karnem.aspx.cs">
+      <DependentUpon>KRN_Karnem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KRN_Karnem.aspx.designer.cs">
+      <DependentUpon>KRN_Karnem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KRN_KarneTanim.aspx.cs">
+      <DependentUpon>KRN_KarneTanim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KRN_KarneTanim.aspx.designer.cs">
+      <DependentUpon>KRN_KarneTanim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KRN_NotGiris.aspx.cs">
+      <DependentUpon>KRN_NotGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KRN_NotGiris.aspx.designer.cs">
+      <DependentUpon>KRN_NotGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_OptikFormlar.aspx.cs">
+      <DependentUpon>ODS_OptikFormlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_OptikFormlar.aspx.designer.cs">
+      <DependentUpon>ODS_OptikFormlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_SinavCevap.aspx.cs">
+      <DependentUpon>ODS_SinavCevap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_SinavCevap.aspx.designer.cs">
+      <DependentUpon>ODS_SinavCevap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_SinavDegerlendir.aspx.cs">
+      <DependentUpon>ODS_SinavDegerlendir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_SinavDegerlendir.aspx.designer.cs">
+      <DependentUpon>ODS_SinavDegerlendir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_SinavDetay.aspx.cs">
+      <DependentUpon>ODS_SinavDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_SinavDetay.aspx.designer.cs">
+      <DependentUpon>ODS_SinavDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_SinavTanim.aspx.cs">
+      <DependentUpon>ODS_SinavTanim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_SinavTanim.aspx.designer.cs">
+      <DependentUpon>ODS_SinavTanim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_SinavTxtUp.aspx.cs">
+      <DependentUpon>ODS_SinavTxtUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ODS_SinavTxtUp.aspx.designer.cs">
+      <DependentUpon>ODS_SinavTxtUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_BanaOzel.aspx.cs">
+      <DependentUpon>OGR_BanaOzel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_BanaOzel.aspx.designer.cs">
+      <DependentUpon>OGR_BanaOzel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_Damlalar.aspx.cs">
+      <DependentUpon>OGR_Damlalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_Damlalar.aspx.designer.cs">
+      <DependentUpon>OGR_Damlalar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_DegerlerEgitimi.aspx.cs">
+      <DependentUpon>OGR_DegerlerEgitimi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_DegerlerEgitimi.aspx.designer.cs">
+      <DependentUpon>OGR_DegerlerEgitimi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_Duyurular.aspx.cs">
+      <DependentUpon>OGR_Duyurular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_Duyurular.aspx.designer.cs">
+      <DependentUpon>OGR_Duyurular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_HaftalikPlan.aspx.cs">
+      <DependentUpon>OGR_HaftalikPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_HaftalikPlan.aspx.designer.cs">
+      <DependentUpon>OGR_HaftalikPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_Odevler.aspx.cs">
+      <DependentUpon>OGR_Odevler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_Odevler.aspx.designer.cs">
+      <DependentUpon>OGR_Odevler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_SinavDetay.aspx.cs">
+      <DependentUpon>OGR_SinavDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_SinavDetay.aspx.designer.cs">
+      <DependentUpon>OGR_SinavDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OGR_Sinavlar.aspx.cs">
+      <DependentUpon>OGR_Sinavlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OGR_Sinavlar.aspx.designer.cs">
+      <DependentUpon>OGR_Sinavlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RDS_Randevular.aspx.cs">
+      <DependentUpon>RDS_Randevular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RDS_Randevular.aspx.designer.cs">
+      <DependentUpon>RDS_Randevular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RDS_Randevum.aspx.cs">
+      <DependentUpon>RDS_Randevum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RDS_Randevum.aspx.designer.cs">
+      <DependentUpon>RDS_Randevum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RDS_Randevum1.aspx.cs">
+      <DependentUpon>RDS_Randevum1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RDS_Randevum1.aspx.designer.cs">
+      <DependentUpon>RDS_Randevum1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_DataSets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPR_DataSets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_HaftalikKarne1.aspx.cs">
+      <DependentUpon>RPR_HaftalikKarne1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_HaftalikKarne1.aspx.designer.cs">
+      <DependentUpon>RPR_HaftalikKarne1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_HaftalikKarneAna1.aspx.cs">
+      <DependentUpon>RPR_HaftalikKarneAna1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_HaftalikKarneAna1.aspx.designer.cs">
+      <DependentUpon>RPR_HaftalikKarneAna1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_HepRaporu1.aspx.cs">
+      <DependentUpon>RPR_HepRaporu1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_HepRaporu1.aspx.designer.cs">
+      <DependentUpon>RPR_HepRaporu1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_Randevular.aspx.cs">
+      <DependentUpon>RPR_Randevular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_Randevular.aspx.designer.cs">
+      <DependentUpon>RPR_Randevular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_SinavSonuc1.aspx.cs">
+      <DependentUpon>RPR_SinavSonuc1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_SinavSonuc1.aspx.designer.cs">
+      <DependentUpon>RPR_SinavSonuc1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_SinavSonucListe1.aspx.cs">
+      <DependentUpon>RPR_SinavSonucListe1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_SinavSonucListe1.aspx.designer.cs">
+      <DependentUpon>RPR_SinavSonucListe1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPR_SinavSonucListesii.aspx.cs">
+      <DependentUpon>RPR_SinavSonucListesii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPR_SinavSonucListesii.aspx.designer.cs">
+      <DependentUpon>RPR_SinavSonucListesii.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sec_Hafta.aspx.cs">
+      <DependentUpon>Sec_Hafta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sec_Hafta.aspx.designer.cs">
+      <DependentUpon>Sec_Hafta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_Odevler.aspx.cs">
+      <DependentUpon>HKS_Odevler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_Odevler.aspx.designer.cs">
+      <DependentUpon>HKS_Odevler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_Duyurular.aspx.cs">
+      <DependentUpon>HKS_Duyurular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_Duyurular.aspx.designer.cs">
+      <DependentUpon>HKS_Duyurular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HKS_Damlaciklar.aspx.cs">
+      <DependentUpon>HKS_Damlaciklar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HKS_Damlaciklar.aspx.designer.cs">
+      <DependentUpon>HKS_Damlaciklar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontrol\Glo.cs" />
+    <Compile Include="Kontrol\proLogin.cs" />
+    <Compile Include="Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sec_Okul.aspx.cs">
+      <DependentUpon>Sec_Okul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sec_Okul.aspx.designer.cs">
+      <DependentUpon>Sec_Okul.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SifreGonder.aspx.cs">
+      <DependentUpon>SifreGonder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SifreGonder.aspx.designer.cs">
+      <DependentUpon>SifreGonder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinavSonucListesi.cs">
+      <DependentUpon>SinavSonucListesi.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SinavSonucListesi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SinavSonucListesi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Branslar.aspx.cs">
+      <DependentUpon>Yonet_Branslar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Branslar.aspx.designer.cs">
+      <DependentUpon>Yonet_Branslar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Dersler.aspx.cs">
+      <DependentUpon>Yonet_Dersler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Dersler.aspx.designer.cs">
+      <DependentUpon>Yonet_Dersler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Haftalar.aspx.cs">
+      <DependentUpon>Yonet_Haftalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Haftalar.aspx.designer.cs">
+      <DependentUpon>Yonet_Haftalar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Kurlar.aspx.cs">
+      <DependentUpon>Yonet_Kurlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Kurlar.aspx.designer.cs">
+      <DependentUpon>Yonet_Kurlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Ogrenciler.aspx.cs">
+      <DependentUpon>Yonet_Ogrenciler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Ogrenciler.aspx.designer.cs">
+      <DependentUpon>Yonet_Ogrenciler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Ogretmenler.aspx.cs">
+      <DependentUpon>Yonet_Ogretmenler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Ogretmenler.aspx.designer.cs">
+      <DependentUpon>Yonet_Ogretmenler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Okullar.aspx.cs">
+      <DependentUpon>Yonet_Okullar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Okullar.aspx.designer.cs">
+      <DependentUpon>Yonet_Okullar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Resimler.aspx.cs">
+      <DependentUpon>Yonet_Resimler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Resimler.aspx.designer.cs">
+      <DependentUpon>Yonet_Resimler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Siniflar.aspx.cs">
+      <DependentUpon>Yonet_Siniflar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Siniflar.aspx.designer.cs">
+      <DependentUpon>Yonet_Siniflar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_Subeler.aspx.cs">
+      <DependentUpon>Yonet_Subeler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_Subeler.aspx.designer.cs">
+      <DependentUpon>Yonet_Subeler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_TopluOgrenci.aspx.cs">
+      <DependentUpon>Yonet_TopluOgrenci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_TopluOgrenci.aspx.designer.cs">
+      <DependentUpon>Yonet_TopluOgrenci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet_TopluOgretmen.aspx.cs">
+      <DependentUpon>Yonet_TopluOgretmen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet_TopluOgretmen.aspx.designer.cs">
+      <DependentUpon>Yonet_TopluOgretmen.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\backgrounds\.DS_Store" />
+    <Content Include="images\content\.DS_Store" />
+    <Content Include="images\icons\.DS_Store" />
+    <Content Include="images\icons\small\.DS_Store" />
+    <Content Include="images\icons\small\grey\.DS_Store" />
+    <Content Include="images\icons\small\white\.DS_Store" />
+    <Content Include="images\plugins\.DS_Store" />
+    <Content Include="includes\.DS_Store" />
+    <Content Include="includes\components\breadcrumb.php" />
+    <Content Include="includes\components\dynamic_loading.php" />
+    <Content Include="includes\components\navbar-fixed.php" />
+    <Content Include="includes\components\navbar.php" />
+    <Content Include="includes\components\navigation.php" />
+    <Content Include="includes\components\sidebar.php" />
+    <Content Include="includes\components\stackbar.php" />
+    <Content Include="includes\components\template_options.php" />
+    <Content Include="includes\components\topbar.php" />
+    <Content Include="includes\content\.DS_Store" />
+    <Content Include="includes\content\contact_tiles.php" />
+    <Content Include="includes\content\datatables_data.php" />
+    <Content Include="includes\content\feature_tiles.php" />
+    <Content Include="includes\content\gallery_images.php" />
+    <Content Include="includes\content\media_tiles.php" />
+    <Content Include="includes\content\select_colours.php" />
+    <Content Include="includes\content\select_countries.php" />
+    <Content Include="includes\content\touch_images.php" />
+    <Content Include="includes\content\video_tiles.php" />
+    <Content Include="includes\core\.DS_Store" />
+    <Content Include="includes\core\document_foot.php" />
+    <Content Include="includes\core\document_head.php" />
+    <Content Include="includes\dialogs\dialog_delete.php" />
+    <Content Include="includes\dialogs\dialog_form.php" />
+    <Content Include="includes\dialogs\dialog_logout.php" />
+    <Content Include="includes\dialogs\dialog_register.php" />
+    <Content Include="includes\dialogs\dialog_welcome.php" />
+    <Content Include="scripts\adminica\.DS_Store" />
+    <Content Include="scripts\jquery\.DS_Store" />
+    <Content Include="scripts\prefixfree\.DS_Store" />
+    <Content Include="styles\adminica\.DS_Store" />
+    <Content Include="styles\plugins\.DS_Store" />
+    <Content Include="styles\plugins\bootstrap\.DS_Store" />
+    <Content Include="styles\themes\.DS_Store" />
+    <Content Include="styles\themes\bg_switcher.php" />
+    <Content Include="styles\themes\layout_switcher.php" />
+    <Content Include="styles\themes\nav_switcher.php" />
+    <Content Include="styles\themes\skin_switcher.php" />
+    <Content Include="styles\themes\theme_switcher.php" />
+    <Content Include="Site.Master" />
+    <Content Include="packages.config" />
+    <Content Include="SinavSonucListesi.xsc">
+      <DependentUpon>SinavSonucListesi.xsd</DependentUpon>
+    </Content>
+    <Content Include="RPR_DataSets.xsc">
+      <DependentUpon>RPR_DataSets.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\ekarnem - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ekarnem - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ekarnem - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ekarnem - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EKARNEM.pubxml" />
+    <None Include="Properties\PublishProfiles\EOBS_Publish.pubxml" />
+    <None Include="RPR_DataSets.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RPR_DataSets.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="RPR_DataSets.xss">
+      <DependentUpon>RPR_DataSets.xsd</DependentUpon>
+    </Content>
+    <None Include="SinavSonucListesi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SinavSonucListesi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SinavSonucListesi.xss">
+      <DependentUpon>SinavSonucListesi.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EOBSModel\EOBSModels.csproj">
+      <Project>{295622f5-dc58-4afe-a774-8fea6d5f0bde}</Project>
+      <Name>EOBSModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="CVSUP\" />
+    <Folder Include="Raporlar\SinavSonucListesi\" />
+    <Folder Include="RESIMLER\OKUL\" />
+    <Folder Include="TXTUP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RPR_SinavSonucListe2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="RPR_AraKarne1ccc.rdlc" />
+    <Content Include="SUB_AraSinavlar.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_AraKarne1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_HepRaporu1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_SinavSonucListe1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_Davranislar.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_Gelmeyen.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_HepRaporu1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_HepRaporu2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_KarneAna3.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_KarneAna2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_HaftalikKarneAna3.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_HaftalikKarneAna2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_HaftalikKarneAna1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_DuyurularAna1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_HaftalikDetay1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_SinavSonuc1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_DersSnc.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_KarneAna1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_NotKarnem.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_OdevlerAna1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_OdevSonuc.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_HaftalikKarne1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPR_Randevular.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SinavSonucListesi.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_OzelNotAna1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_OzelNotlar.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_Sinavlar.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SUB_SnvSnc1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3839</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2346/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,416 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EOBS_001.Site" %>
+
+<!doctype html public "✰">
+<!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en-us" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-us" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+
+		<title>EOBS | Eğitim Öğretim Bilgi Sistemi </title>
+
+  		<meta name="description" content="">
+  		<meta name="author" content="">
+
+	<!-- iPhone, iPad and Android specific settings -->
+
+		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1;">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href="images/interface/iOS_icon.png" rel="apple-touch-icon">
+
+	<!-- Styles -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+		<link rel="stylesheet" href="styles/adminica/main.css">
+		<link rel="stylesheet" href="styles/adminica/grid.css">
+		<link rel="stylesheet" href="styles/adminica/mobile.css">
+
+		<link rel="stylesheet" href="styles/plugins/bootstrap/bootstrap.css">
+
+
+		
+		<link rel="stylesheet" href="styles/themes/skin_light.css" >
+		<link rel="stylesheet" href="styles/themes/theme_blue.css" >
+
+		<link rel="stylesheet" href="styles/themes/switcher.css"> 
+		<link rel="stylesheet" href="styles/adminica/colours.css">
+
+
+		<script src="scripts/jquery/jquery.js"></script>
+		<script src="scripts/prefixfree/prefixfree.js"></script>
+		<script src="scripts/bootstrap/bootstrap.js"></script>
+
+		<script src="scripts/adminica/adminica_ui.js"></script>
+		<script src="scripts/adminica/adminica_mobile.js"></script>
+		<script src="scripts/adminica/adminica_load.js"></script>
+
+		</head>
+	<body>	<div id="pjax">
+		<div id="wrapper" data-adminica-nav-top="1" data-adminica-side-top="1" class="has_fixed_bar">
+
+    <div id="sidebar" class="sidebar pjax_links fixed">
+	<div class="cog">+</div>
+
+	
+
+	<div class="user_box dark_box clearfix">
+		<img src="images/interface/profile.jpg" width="55" alt="Profile Pic" />
+		<h2><asp:Label ID="lblYetki" runat="server" Text=""></asp:Label></h2>
+		<h3><a href="#"><asp:Label ID="lblIsim" runat="server" Text=""></asp:Label></a></h3>
+		<ul>
+			<li><a href="GNL_Ayarlar.aspx">AYARLAR</a><span class="divider">|</span></li>
+			<li><a href="index.aspx?ref=logout" class="dialog_button" data-dialog="dialog_logout">ÇIKIŞ</a></li>
+		</ul>
+	</div><!-- #user_box -->
+  <% 
+    if (Session["KulYetki"] != null)
+    {
+        if (Session["KulYetki"].ToString() == "111") //yönetici
+        { %>  
+        
+            <%if (Session["OkulTur"].ToString() != "111")
+            {
+            %>   
+           <ul class="side_accordion"> 
+		        <li><a href="index.aspx"><img src="images/icons/small/grey/laptop.png"/><span>ANASAYFA</span></a></li>
+		        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>MESAJLAR</span></a>
+                    <ul class="drawer">
+                        <li><a href="GNL_Mesajlar.aspx?ref=<"><span>GELEN KUTUSU</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=^"><span>YENİ MESAJ</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=>"><span>GİDEN KUTUSU</span></a></li>
+                    </ul>
+		        </li>
+		        <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>HAFTALIK KARNE S.</span></a>
+                    <ul class="drawer">
+                        <li><a href="HKS_Duyurular.aspx"><span>DUYURULAR</span></a></li>
+                        <li><a href="HKS_Odevler.aspx"><span>ÖDEVLER</span></a></li>
+                        <li><a href="HKS_OdevSnclar.aspx"><span>ÖDEV SONUÇLARI</span></a></li>
+                        <li><a href="HKS_OzelNotlar.aspx"><span>ÖZEL NOTLAR</span></a></li>
+                        <li><a href="HKS_Damlaciklar.aspx"><span>REHBERLİK</span></a></li>
+                        <li><a href="HKS_Davranislar.aspx"><span>DAVRANIŞLAR</span></a></li>
+                        <li><a href="HKS_Gelmeyenler.aspx"><span>GELMEYENLER</span></a></li>
+                    </ul>
+		        </li>
+		        <li><a href="RDS_Randevular.aspx"><img src="images/icons/small/grey/list.png"/><span>RANDEVULU DERS S.</span></a></li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>KARNE YÖNETİMİ</span></a>
+                    <ul class="drawer">
+                        <li><a href="KRN_KarneTanim.aspx"><span>TANIMLAR</span></a></li>
+				        <li><a href="KRN_NotGiris.aspx"><span>NOT GİRİŞİ</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>OLCME & DEG.</span></a>
+                    <ul class="drawer">
+                        <li><a href="ODS_SinavTanim.aspx"><span>TANIMLAR</span></a></li>
+				        <li><a href="ODS_SinavDetay.aspx"><span>DETAYLAR</span></a></li>
+                        <li><a href="ODS_SinavDegerlendir.aspx"><span>DEĞERLENDİRME</span></a></li>
+                        <li><a href="ODS_SinavDegerlendirDiger.aspx"><span>DİĞER DEĞ.</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="RPR_Raporlar.aspx"><img src="images/icons/small/grey/list.png"/><span>RAPORLAR</span></a>
+			        <ul class="drawer">
+				        <li><a href="RPR_Randevular.aspx"><span>RANDEVU LiSTESi</span></a></li>
+                        <li><a href="RPR_HaftalikKarne1.aspx"><span>HAFTALIK KARNE</span></a></li>
+                        <li><a href="RPR_AraKarne1.aspx"><span>ÖĞRENCİ RAPORU</span></a></li>
+                        <li><a href="RPR_SinavSonuc1.aspx"><span>SINAV SONUC</span></a></li>
+                        <li><a href="RPR_SinavSonucListe1.aspx"><span>SINAV SONUC LİSTESİ</span></a></li>
+                        <li><a href="RPR_HepRaporu1.aspx"><span>HEP RAPORU</span></a></li>
+			        </ul>
+		        </li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>YÖNETİM</span></a>
+			        <ul class="drawer">
+				        <li><a href="Yonet_Okullar.aspx"><span>OKULLAR</span></a></li>
+                        <li><a href="Yonet_Siniflar.aspx"><span>SINIFLAR</span></a></li>
+                        <li><a href="Yonet_Subeler.aspx"><span>ŞUBELER</span></a></li>
+                        <li><a href="Yonet_Kurlar.aspx"><span>KURLAR</span></a></li>
+				        <li><a href="Yonet_Dersler.aspx"><span>DERSLER</span></a></li>
+                        <li><a href="Yonet_Branslar.aspx"><span>BRANŞLAR</span></a></li>
+                        <li><a href="Yonet_TopluOgretmen.aspx"><span>TOPLU ÖĞRETMEN EKLE</span></a></li>
+                        <li><a href="Yonet_TopluOgrenci.aspx"><span>TOPLU ÖĞRENCİ EKLE</span></a></li>
+                        <li><a href="Yonet_Haftalar.aspx"><span>HAFTALAR</span></a></li>
+                        <li><a href="Yonet_Davranislar.aspx"><span>DAVRANIŞLAR</span></a></li>
+                        <li><a href="Yonet_Resimler.aspx"><span>RESİMLER</span></a></li>
+			        </ul>
+		        </li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>GENEL</span></a>
+			        <ul class="drawer">
+				        <li><a href="Yonet_Okullar.aspx"><span>OKULLAR</span></a></li>
+                        <li><a href="Yonet_Haftalar.aspx"><span>HAFTALAR</span></a></li>
+                        <li><a href="Yonet_Ogrenciler.aspx"><span>ÖĞRENCİLER</span></a></li>
+                        <li><a href="Yonet_Ogretmenler.aspx"><span>ÖĞRETMENLER</span></a></li>
+			        </ul>
+		        </li> 
+   
+	        </ul>
+        <%}%>
+
+        <%if (Session["OkulTur"].ToString() == "111")
+            {
+            %>   
+           <ul class="side_accordion"> 
+		        <li><a href="index.aspx"><img src="images/icons/small/grey/laptop.png"/><span>ANASAYFA</span></a></li>
+		        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>MESAJLAR</span></a>
+                    <ul class="drawer">
+                        <li><a href="GNL_Mesajlar.aspx?ref=<"><span>GELEN KUTUSU</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=^"><span>YENİ MESAJ</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=>"><span>GİDEN KUTUSU</span></a></li>
+                    </ul>
+		        </li>
+		        <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>HAFTALIK KARNE</span></a>
+                    <ul class="drawer">
+                        <li><a href="HKS_Duyurular.aspx"><span>DUYURULAR</span></a></li>
+                        <li><a href="HKS_Damlaciklar.aspx"><span>HAYDİ TEKRAR</span></a></li>
+                        <li><a href="HKS_OzelNotlar.aspx"><span>ÖZEL NOTLAR</span></a></li>
+                        <li><a href="HKS_Odevler.aspx"><span>EV ÇALIŞMALARI</span></a></li>
+                        <li><a href="HKS_DegerEgitimi.aspx"><span>DEĞERLER EĞİTİMİ</span></a></li>
+                        <li><a href="HKS_HaftalikPlan.aspx"><span>HAFTALIK PLAN</span></a></li>
+                    </ul>
+		        </li>
+                <li><a href="RPR_Raporlar.aspx"><img src="images/icons/small/grey/list.png"/><span>RAPORLAR</span></a></li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>YÖNETİM</span></a>
+			        <ul class="drawer">
+				        <li><a href="Yonet_Okullar.aspx"><span>Okulları Yönet</span></a></li>
+                        <li><a href="Yonet_Siniflar.aspx"><span>Sınıfları Yönet</span></a></li>
+                        <li><a href="Yonet_Subeler.aspx"><span>Şubeleri Yönet</span></a></li>
+                        <li><a href="Yonet_Branslar.aspx"><span>Branşları Yönet</span></a></li>
+                        <li><a href="Yonet_TopluOgretmen.aspx"><span>Toplu Öğretmen Ekle</span></a></li>
+                        <li><a href="Yonet_TopluOgrenci.aspx"><span>Toplu Öğrenci Ekle</span></a></li>
+                        <li><a href="Yonet_Haftalar.aspx"><span>Haftalar</span></a></li>
+			        </ul>
+		        </li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>GENEL</span></a>
+			        <ul class="drawer">
+				        <li><a href="Yonet_Okullar.aspx"><span>Okullar</span></a></li>
+                        <li><a href="Yonet_Haftalar.aspx"><span>Haftalar</span></a></li>
+                        <li><a href="Yonet_Ogrenciler.aspx"><span>Öğrenciler</span></a></li>
+                        <li><a href="Yonet_Ogretmenler.aspx"><span>Öğretmenler</span></a></li>
+			        </ul>
+		        </li> 
+   
+	        </ul>
+        <%}%>
+
+        <%
+        }
+    } 
+%>
+<% 
+    if (Session["KulYetki"] != null)
+    {
+        if (Session["KulYetki"].ToString() == "222") //öğretmen
+        { %>
+            
+        
+            <%if (Session["OkulTur"].ToString() != "111")
+            {
+            %>  
+	        <ul class="side_accordion" id="nav_side"> 
+		        <li><a href="index.aspx"><img src="images/icons/small/grey/laptop.png"/><span>ANASAYFA</span></a></li>
+		        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>MESAJLAR</span></a>
+                    <ul class="drawer">
+                        <li><a href="GNL_Mesajlar.aspx?ref=<"><span>GELEN KUTUSU</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=^"><span>YENİ MESAJ</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=>"><span>GİDEN KUTUSU</span></a></li>
+                    </ul>
+		        </li>
+		        <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>HAFTALIK KARNE S.</span></a>
+                    <ul class="drawer">
+                        <li><a href="HKS_Duyurular.aspx"><span>DUYURULAR</span></a></li>
+				        <li><a href="HKS_Damlaciklar.aspx"><span>REHBERLİK</span></a></li>
+                        <li><a href="HKS_Odevler.aspx"><span>ÖDEVLER</span></a></li>
+                        <li><a href="HKS_OdevSnclar.aspx"><span>ÖDEV SONUÇLARI</span></a></li>
+                        <li><a href="HKS_OzelNotlar.aspx"><span>ÖZEL NOTLAR</span></a></li>
+                        <li><a href="HKS_Davranislar.aspx"><span>DAVRANIŞLAR</span></a></li>
+                        <li><a href="HKS_Gelmeyenler.aspx"><span>GELMEYENLER</span></a></li>
+                    </ul>
+		        </li>
+                <li><a href="RDS_Randevum.aspx"><img src="images/icons/small/grey/list.png"/><span>RANDEVULU DERS S.</span></a></li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>DERS NOTLARI</span></a>
+                    <ul class="drawer">
+				        <li><a href="KRN_NotGiris.aspx"><span>DERS NOTU GİR</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>HEP SiSTEMi</span></a>
+                    <ul class="drawer">
+				        <li><a href="HEP_VeriGiris.aspx"><span>HEP VERi GİR</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="RPR_Raporlar.aspx"><img src="images/icons/small/grey/list.png"/><span>RAPORLAR</span></a>
+			        <ul class="drawer">
+				        <li><a href="RPR_Randevular.aspx"><span>RANDEVU LiSTESi</span></a></li>
+                        <li><a href="RPR_HaftalikKarne1.aspx"><span>HAFTALIK KARNE</span></a></li>
+                        <li><a href="RPR_AraKarne1.aspx"><span>ÖĞRENCİ RAPORU</span></a></li>
+                        <li><a href="RPR_SinavSonuc1.aspx"><span>SINAV SONUC</span></a></li>
+                        <li><a href="RPR_SinavSonucListe1.aspx"><span>SINAV SONUC LİSTESİ</span></a></li>
+                        <li><a href="RPR_HepRaporu1.aspx"><span>HEP RAPORU</span></a></li>
+			        </ul>
+		        </li> 
+                
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>GENEL</span></a>
+			        <ul class="drawer">
+				        <li><a href="Sec_Okul.aspx"><span>OKUL DEĞİŞTİR</span></a></li>
+                        <li><a href="Sec_Hafta.aspx"><span>HAFTA DEĞİŞTİR</span></a></li>
+			        </ul>
+		        </li> 
+	        </ul>
+            <%}%>
+            <%if (Session["OkulTur"].ToString() == "111")
+            {
+            %>  
+	        <ul class="side_accordion" id="Ul3"> 
+		        <li><a href="index.aspx"><img src="images/icons/small/grey/laptop.png"/><span>ANASAYFA</span></a></li>
+		        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>MESAJLAR</span></a>
+                    <ul class="drawer">
+                        <li><a href="GNL_Mesajlar.aspx?ref=<"><span>GELEN KUTUSU</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=^"><span>YENİ MESAJ</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=>"><span>GİDEN KUTUSU</span></a></li>
+                    </ul>
+		        </li>
+		        <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>HAFTALIK KARNE S.</span></a>
+                    <ul class="drawer">
+                        <li><a href="HKS_Duyurular.aspx"><span>DUYURULAR</span></a></li>
+                        <li><a href="HKS_Odevler.aspx"><span>EV ÇALIŞMALARI</span></a></li>
+                        <li><a href="HKS_OzelNotlar.aspx"><span>ÖZEL NOTLAR</span></a></li>
+                        <li><a href="HKS_Damlaciklar.aspx"><span>HAYDİ TEKRAR</span></a></li>
+                        <li><a href="HKS_DegerEgitimi.aspx"><span>DEĞERLER EĞİTİMİ</span></a></li>
+                        <li><a href="HKS_HaftalikPlan.aspx"><span>HAFTALIK PLAN</span></a></li>
+                    </ul>
+		        </li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>RAPORLAR</span></a>
+			        <ul class="drawer">
+				        <li><a href="RPR_HaftalikKarneAna1.aspx"><span>HAFTALIK KARNE</span></a></li>
+			        </ul>
+		        </li> 
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>GENEL</span></a>
+			        <ul class="drawer">
+				        <li><a href="Sec_Okul.aspx"><span>OKUL DEĞİŞTİR</span></a></li>
+                        <li><a href="Sec_Hafta.aspx"><span>HAFTA DEĞİŞTİR</span></a></li>
+			        </ul>
+		        </li> 
+	        </ul>
+            <%}%>
+<%
+}
+    }
+%>
+<% 
+    if (Session["KulYetki"] != null)
+    {
+        if (Session["KulYetki"].ToString() == "333" || Session["KulYetki"].ToString() == "444") //öğrenci veli
+        { 
+            %>
+        
+            <%if (Session["OkulTur"].ToString() == "111")
+            {
+            %>   
+	        <ul class="side_accordion" id="Ul2"> 
+		        <li><a href="index1.aspx"><img src="images/icons/small/grey/laptop.png"/><span>HAFTALIK</span></a></li>
+		        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>MESAJLAR</span></a>
+                    <ul class="drawer">
+                        <li><a href="GNL_Mesajlar.aspx?ref=<"><span>GELEN KUTUSU</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=^"><span>YENİ MESAJ</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=>"><span>GİDEN KUTUSU</span></a></li>
+                    </ul>
+		        </li>
+                <li><a href="OGR_Duyurular.aspx"><img src="images/icons/small/grey/list.png"/><span>DUYURULAR</span></a></li>
+                <li><a href="OGR_BanaOzel.aspx"><img src="images/icons/small/grey/list.png"/><span>BANA ÖZEL</span></a></li>
+                <li><a href="OGR_Damlalar.aspx"><img src="images/icons/small/grey/list.png"/><span>HAYDİ TEKRAR E.</span></a></li>
+                <li><a href="OGR_Odevler.aspx"><img src="images/icons/small/grey/list.png"/><span>EV ÇALIŞMALARI</span></a></li>
+                <li><a href="OGR_DegerlerEgitimi.aspx"><img src="images/icons/small/grey/list.png"/><span>DEĞERLER EĞİTİMİ</span></a></li>
+                <li><a href="OGR_HaftalikPlan.aspx"><img src="images/icons/small/grey/list.png"/><span>HAFTALIK PLAN</span></a></li>
+
+	        </ul>
+            <%}%>
+
+            <%if (Session["OkulTur"].ToString() != "111")
+            {
+            %>   
+	        <ul class="side_accordion" id="Ul1"> 
+		        <li><a href="index1.aspx"><img src="images/icons/small/grey/laptop.png"/><span>ANASAYFA</span></a></li>
+		        <li><a href="#"><img src="images/icons/small/grey/frames.png"/><span>MESAJLAR</span></a>
+                    <ul class="drawer">
+                        <li><a href="GNL_Mesajlar.aspx?ref=<"><span>GELEN KUTUSU</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=^"><span>YENİ MESAJ</span></a></li>
+                        <li><a href="GNL_Mesajlar.aspx?ref=>"><span>GİDEN KUTUSU</span></a></li>
+                    </ul>
+		        </li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>HAFTALIK KARNE S.</span></a>
+                    <ul class="drawer">
+                        <li><a href="OGR_Duyurular.aspx"><img src="images/icons/small/grey/list.png"/><span>DUYURULAR</span></a></li>
+                        <li><a href="OGR_BanaOzel.aspx"><img src="images/icons/small/grey/list.png"/><span>BANA ÖZEL</span></a></li>
+                        <li><a href="OGR_Odevler.aspx"><img src="images/icons/small/grey/list.png"/><span>ÖDEVLER</span></a></li>
+                        <li><a href="OGR_Odevler.aspx"><img src="images/icons/small/grey/list.png"/><span>ÖDEV SONUÇLARI</span></a></li>
+                        <li><a href="OGR_Damlalar.aspx"><img src="images/icons/small/grey/list.png"/><span>REHBERLİK</span></a></li>
+                    </ul>
+		        </li>
+                <li><a href="RDS_Randevum1.aspx"><img src="images/icons/small/grey/list.png"/><span>RANDEVULU DERS S.</span></a></li>
+                <li><a href="KRN_Karnem.aspx"><img src="images/icons/small/grey/list.png"/><span>KARNEM</span></a></li>
+                <li><a href="OGR_Sinavlar.aspx"><img src="images/icons/small/grey/list.png"/><span>SINAVLAR</span></a></li>
+                <li><a href="#"><img src="images/icons/small/grey/list.png"/><span>RAPORLAR</span></a>
+			        <ul class="drawer">
+                        <li><a href="RPR_HaftalikKarne1.aspx"><span>HAFTALIK KARNE</span></a></li>
+                        <li><a href="RPR_SinavSonuc1.aspx"><span>SINAV SONUÇ</span></a></li>
+                        <li><a href="RPR_HepRaporu1.aspx"><span>HEP RAPORU</span></a></li>
+			        </ul>
+		        </li> 
+	        </ul>
+            <%}%>
+
+            
+        <%
+        }
+    }
+%>
+
+	        <div id="search_side" class="dark_box"><form><input class="" type="text" placeholder="Arama..."></form></div>
+
+	        <ul id="side_links" class="side_links" style="margin-bottom:0;">
+		        <li><a target="_blank" href="#">Yardım</a>
+		        <li><a target="_blank" href="#">Eğitim</a></li>
+		        <li><a target="_blank" href="#">Çıkış</a></li>
+	        </ul>
+</div><!-- #sidebar -->
+
+
+			<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#" style="">EOBS - <asp:Label ID="lblAktifOkulAd" runat="server" Text=""></asp:Label></a>
+      <ul class="nav pull-right">
+       
+        <li class="divider-vertical"></li>
+        <li>
+          <a href="index.aspx?ref=logout">ÇIKIŞ</a>
+        </li>
+      </ul>
+     </div>
+  </div>
+</div>			
+            <form id="frmMain" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </form>
+		</div>
+
+		<div id="loading_overlay">
+			<div class="loading_message round_bottom">
+				<img src="images/interface/loading.gif" alt="loading" />
+			</div>
+		    
+		</div>
+
+</div>
+        <asp:SqlDataSource ID="DS1" runat="server" ConnectionString="<%$ ConnectionStrings:EOBS_001ConnectionString %>" SelectCommand="SELECT [HFT_ID] FROM [HAFTALAR]"></asp:SqlDataSource>
+	</body>
+</html>

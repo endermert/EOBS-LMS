@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{295622F5-DC58-4AFE-A774-8FEA6D5F0BDE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EOBSModel</RootNamespace>
+    <AssemblyName>EOBSModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AOPLANLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ARA_TBL1.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ARA_TBL2.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BRANSLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CEVAPLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CINSIYET.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAMLACIKLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAVRANIS.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAVRANISLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEGEREGITIM.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DERSLER.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEVAMSIZ.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DRSSNVSNC.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DUYURULAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EOBSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EOBSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EOBSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EOBSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EOBSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HAFTALAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HATALAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HEPTABLO.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KARNEDERS.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KARNEDERSNOT.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KARNELER.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KULLANICILAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KURLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MESAJLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODEVLER.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODEVSNC.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODEVSNCLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OKULLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OKULTUR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OPTIK.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OZELNOT.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OZELNOTLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RDSDERSLER.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RDSLISTE.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RESIMLER.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SAYFALAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINAVDETAY.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINAVLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINAVSNC.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINAVTIP.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SINIFLAR.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SORUANALIZ.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUBELER.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YETKILER.cs">
+      <DependentUpon>EOBSModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EOBSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EOBSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EOBSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EOBSModel.edmx</DependentUpon>
+      <LastGenOutput>EOBSModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EOBSModel.edmx.diagram">
+      <DependentUpon>EOBSModel.edmx</DependentUpon>
+    </None>
+    <None Include="EOBSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EOBSModel.edmx</DependentUpon>
+      <LastGenOutput>EOBSModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
